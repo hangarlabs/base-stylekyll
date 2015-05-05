@@ -1,3 +1,16 @@
+### To mirror this repository in a new project please do the following:
+
+    git clone --bare https://github.com/hangarlabs/base-stylekyll.git
+    # Make a bare clone of the repository
+
+    cd base-stylekyll.git
+    git push --mirror https://github.com/hangarcr/new-repository.git
+    # Mirror-push to the new repository
+
+    cd ..
+    rm -rf base-stylekyll.git
+    # Remove our temporary local repository
+
 # Stylekyll  
 
 Many of companys that make web design do styleguides to keep standars of colors, fonts, components, etc. We as web developers take those styleguides to actual code (html, css, js). For this reason is that stylekyll was created.
