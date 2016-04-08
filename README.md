@@ -53,11 +53,11 @@ In order to work with the template, you will need the following tools:
 
 * Since we are using a specific version of Gulp, make sure you run Gulp as:
     
-    $ ./node_modules/.bin/gulp
+        $ ./node_modules/.bin/gulp
 
 * In case you want o compile the Styleguide manually run (The Styleguide is already being created from the './node_modules/.bin/gulp' command, and everytime you make a change it automatically reloads):
 
-    $ ./node_modules/.bin/kss-node --source src/assets/scss --destination dist/styleguide --template _template-kss
+        $ ./node_modules/.bin/kss-node --source src/assets/scss --destination dist/styleguide --template _template-kss
 
     
 ### How to run it
