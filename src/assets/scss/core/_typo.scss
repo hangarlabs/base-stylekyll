@@ -1,0 +1,71 @@
+// Typography
+//
+// Location: scss/core/_typo.scss
+//
+// Markup:
+// <h1>50 px, trade gothic bold no. 20</h1>
+// <h2>36 px, Plantin Regular Italic</h2>
+// <h3>36 px, Trade gothic bold n0. 20</h3>
+// <h4>20 px, Trade gothic bold n0. 20</h4>
+// <h5>18px, Trade gothic bold no. 18</h5>
+// <h6>18 px, Plantin Regular</h6>
+// <p>14 px, Trade Gothic Bold No. 2</p>
+// <h6><span>12 px, Plantin Regular</span></h6>
+//
+// Styleguide 1.4
+
+// Font Face
+h1, .h1, h3, .h3, h4, .h4 { // Trade Gothic Bold No.20
+  font-family: "Trade Gothic W01";
+  font-style: normal;
+  font-weight: 700;
+}
+h2, .h2 { // Plantin Regular Italic
+	font-family: "Plantin W01";
+	font-style: italic;
+  font-weight: 400;
+}
+h5, .h5 { // Trade Gothic Bold No.18
+	font-family: "Trade Gothic W01";
+	font-style: normal;
+  font-weight: 400;
+}
+h6, .h6 { // Plantin Regular	
+	font-family: "Plantin W01";
+	font-style: normal;
+  font-weight: 400;
+}
+p, .p { // Trade Gothic Bold No.2
+	font-family: "Trade Gothic W01";
+	font-style: normal;
+  font-weight: 800;
+}
+
+// Font Sizes
+h1, .h1 {
+  font-size: 50px;
+  line-height: 55px;
+}
+h2, .h2, h3, .h3 {
+  font-size: 36px;
+  line-height: 41px;
+}
+h4, .h4 {
+  font-size: 20px;
+  line-height: 25px;
+}
+h5, .h5, h6, .h6 {
+  font-size: 18px;
+  line-height: 23px;
+}
+h6, .h6 {
+	span {
+  	font-size: 12px;
+  	line-height: 17px;
+  }
+}
+
+p, .p {
+	font-size: 14px;
+  line-height: 19px;
+}

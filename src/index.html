@@ -1,0 +1,40 @@
+---
+layout: admin
+title: Career Development Tool Templates
+regenerate: true
+---
+
+<div class="container" style="margin-top: 30px;">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="panel-title" style="font-size: 30px; line-height: 32px; text-transform: uppercase;">Styleguide</h2>
+        </div>
+        <div class="panel-body">
+          <ul class="list-unstyled list-group">
+            <li class="list-group-item" style="font-size: 16px; line-height: 25px;">
+              <a class="post-link" href="/styleguide" target="_blank">Career Development Tool</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="panel-title" style="font-size: 30px; line-height: 32px; text-transform: uppercase;">Career Development Tool Templates</h2>
+        </div>
+        <div class="panel-body">
+          <ul class="list-unstyled list-group">
+            {% for page in site.pages %}
+              {% if page.title != 'Career Development Tool Templates' %}
+                <li class="list-group-item" style="font-size: 16px; line-height: 25px;">
+                  <a class="post-link" href="{{ page.path }}" target="_blank">{{ page.title }}</a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

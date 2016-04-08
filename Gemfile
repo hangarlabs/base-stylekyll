@@ -2,5 +2,14 @@ source "http://rubygems.org"
 
 gem 'jekyll'
 gem 'redcarpet'
-gem 'jekyll-contentblocks', '~> 0.0.3'
-gem 'bootstrap-sass', '~> 3.2.0'
+gem 'classifier-reborn'
+
+# jekyll plugins
+gem 'jekyll-archives'
+gem 'jekyll-feed'
+gem 'jekyll-gist'
+gem 'jekyll-paginate'
+gem 'jekyll-sitemap'
+
+# octopress
+gem 'octopress', '~> 3.0'

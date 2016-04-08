@@ -1,0 +1,63 @@
+//== Global
+//
+//## Global variables
+$prefix: 'cm-cdt';
+// .#{$prefix}-p   = page
+// .#{$prefix}-m   = module
+// .#{$prefix}-h   = helper
+// .#{$prefix}-mix = mixin
+// .#{$prefix}-is  = state
+// .#{$prefix}-f   = function
+
+
+
+//== Slick
+//
+//## Slick variables
+$slick-font-path: "../fonts/";
+
+
+
+// Colors
+//
+// Location: scss/core/_variables.scss
+//
+// Here should be defined all the colors that will be used on the entire page.
+//
+// Markup:
+// <div class="styleguide-color" style="background-color:#FE271E">$color-redorange</div>
+// <div class="styleguide-color" style="background-color:#383838">$color-mineshaft</div>
+// <div class="styleguide-color" style="background-color:#000000">$color-black</div>
+// <div class="styleguide-color" style="background-color:#FFFFFF;color:#000000">$color-white</div>
+// <div class="styleguide-color" style="background-color:#8B0000">$color-redberry</div>
+// <div class="styleguide-color" style="background-color:#CD0000">$color-guardsmanred</div>
+// <div class="styleguide-color" style="background-color:#FFCC00;color:#000000">$color-supernova</div>
+// <div class="styleguide-color" style="background-color:#C0C0C0;color:#000000">$color-silver</div>
+// <div class="styleguide-color" style="background-color:#B0CC59;color:#000000">$color-celery</div>
+// <div class="styleguide-color" style="background-color:#1D3746">$color-bluedianne</div>
+// <div class="styleguide-color" style="background-color:#EDEBF0;color:#000000">$color-athensgray</div>
+//
+// Styleguide 1.2
+
+$color-redorange: #FE271E;
+$color-mineshaft: #383838;
+$color-black: #000000;
+$color-white: #FFFFFF;
+$color-redberry: #8B0000;
+$color-guardsmanred: #CD0000;
+$color-supernova: #FFCC00;
+$color-silver: #C0C0C0;
+$color-celery: #B0CC59;
+$color-bluedianne: #1D3746;
+$color-athensgray: #EDEBF0;
+
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+$font-family-serif: "Plantin W01", "Times New Roman", Times, serif;
+$font-family-base: $font-family-sans-serif;
+$font-size-base: 18px;

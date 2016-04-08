@@ -1,0 +1,113 @@
+// Logo
+//
+// Location: scss/helpers/_icons.scss
+//
+// Markup:
+// <svg class="icon icon-logo-large"><use xlink:href="#logo-large"></use></svg>
+// <svg class="icon icon-logo-small"><use xlink:href="#logo-small"></use></svg>
+//
+// Styleguide 1.1
+
+// Icons
+//
+// Location: scss/helpers/_icons.scss
+//
+// Each SVG tag should have two classes, one called 'icon' and the collored called 'icon-' + 'the name of the svg'. Example: class='icon icon-svgname'.
+// Some SVGs will have different rotations, for this you can use the utils classes called 'rotate-90', 'rotate-180' or 'rotate-270'.
+//
+// Markup:
+// <svg class="icon icon-close"><use xlink:href="#close"></use></svg>
+// <svg class="icon icon-plus"><use xlink:href="#plus"></use></svg>
+// <svg class="icon icon-less"><use xlink:href="#less"></use></svg>
+// <svg class="icon icon-arrow"><use xlink:href="#arrow"></use></svg>
+// <svg class="icon icon-arrow rotate-180"><use xlink:href="#arrow"></use></svg>
+// <svg class="icon icon-arrow rotate-270"><use xlink:href="#arrow"></use></svg>
+// <svg class="icon icon-arrow rotate-90"><use xlink:href="#arrow"></use></svg>
+// <svg class="icon icon-completed"><use xlink:href="#completed"></use></svg>
+// <svg class="icon icon-in-progress"><use xlink:href="#in-progress"></use></svg>
+// <svg class="icon icon-uncompleted"><use xlink:href="#uncompleted"></use></svg>
+// <svg class="icon icon-search"><use xlink:href="#search"></use></svg>
+// <svg class="icon icon-edit"><use xlink:href="#edit"></use></svg>
+// <svg class="icon icon-delete"><use xlink:href="#delete"></use></svg>
+// <svg class="icon icon-talent-potential-star"><use xlink:href="#talent-potential-star"></use></svg>
+// <svg class="icon icon-talent-shapeuporshipout"><use xlink:href="#talent-shapeuporshipout"></use></svg>
+// <svg class="icon icon-talent-solid-reliable"><use xlink:href="#talent-solid-reliable"></use></svg>
+// <svg class="icon icon-talent-star"><use xlink:href="#talent-star"></use></svg>
+// <svg class="icon icon-notification"><use xlink:href="#notification"></use></svg>
+// <svg class="icon icon-notification-alert"><use xlink:href="#notification-alert"></use></svg>
+// <svg class="icon icon-profile"><use xlink:href="#profile"></use></svg>
+//
+// Styleguide 1.3
+
+// Global
+.icon {
+	pointer-events: none;
+	vertical-align: middle;
+}
+
+// Fill
+
+// Sizes
+.icon-logo-large {
+	width: 466px;
+}
+.icon-logo-small {
+	width: 100px;
+}
+.icon-logo-large,
+.icon-logo-small {
+	height: 100px;
+}
+
+.icon-close {
+	width: 49px;
+	height: 48px;
+}
+
+.icon-plus,
+.icon-less {
+	width: 48px;
+	height: 48px;
+}
+
+.icon-arrow {
+	width: 49px;
+	height: 26px;
+}
+
+.icon-completed,
+.icon-in-progress,
+.icon-uncompleted,
+.icon-talent-potential-star,
+.icon-talent-shapeuporshipout,
+.icon-talent-solid-reliable,
+.icon-talent-star {
+	width: 50px;
+	height: 50px;
+}
+
+.icon-search,
+.icon-edit {
+	width: 49px;
+	height: 49px;
+}
+
+.icon-delete {
+	width: 46px;
+	height: 44px;
+}
+
+.icon-notification {
+	width: 49px;
+	height: 46px;
+}
+
+.icon-notification-alert {
+	width: 53px;
+	height: 53px;
+}
+
+.icon-profile {
+	width: 50px;
+	height: 55px;
+}
