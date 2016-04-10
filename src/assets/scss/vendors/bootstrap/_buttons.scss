@@ -1,0 +1,91 @@
+//=====================================================================================
+//===== OVERRIDE BOOTSTRAP BUTTONS
+
+// Buttons
+//
+// Location: scss/vendors/bootstrap/_buttons.scss
+//
+// A majority of buttons in the site are built from the same twitter bootstrap class, so you can use .btn-sm etc..
+//
+// Markup:
+// <button class="btn {{modifier_class}}">Button</button>
+//
+// .btn-primary         			 - Indicate that the button is the primary feature of the page.
+// .btn-secondary       			 - Indicate that the button is the secondary feature of the page.
+// .btn-sm.btn-primary         - Indicate that the button is the primary feature of the page.
+// .btn-sm.btn-secondary       - Indicate that the button is the secondary feature of the page.
+//
+// Styleguide 1.06
+
+.btn {
+  font-family: "Trade Gothic W01";
+	font-style: normal;
+  font-size: 18px;
+  line-height: 23px;
+  text-transform: uppercase;
+  padding: 20px;
+  min-width: 200px;
+  min-height: 70px;
+}
+
+.btn-sm {
+	font-size: 14px;
+  line-height: 19px;
+	min-width: 175px;
+  min-height: 44px;
+  padding: 15px;
+}
+
+// Mixin: cdt-btn:  Background Color
+// 									Border Color
+// 									Color
+// 									Hover Background Color
+// 									Hover Border Color
+// 									Hover Color
+// 									Pressed Background Color
+// 									Pressed Border Color
+// 									Pressed Color
+
+.btn-primary {
+	@include cdt-btn($color-text, $color-text, $color-white, $color-links, $color-links, $color-white, $color-links, $color-links, $color-text);
+}
+
+.btn-secondary {
+	@include cdt-btn($color-white, $color-text, $color-text, $color-links, $color-links, $color-white, $color-white, $color-text, $color-text);
+}
+
+// Button Links
+//
+// Location: scss/vendors/bootstrap/_buttons.scss
+//
+// Markup:
+// <a href="/styleguide/section-1.html#section-1.5" class="btn btn-link">Button Link</a>
+//
+// Styleguide 1.07
+
+.btn-link {
+	font-size: 12px;
+  line-height: 14px;
+  min-height: 0;
+  min-width: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid ;
+  border-color: $color-text !important;
+  color: $color-text;
+  text-decoration: none !important;
+  &:focus {
+    border-color: $color-text !important;
+    color: $color-text;
+  }
+  &:hover,
+  &:active {
+    border-color: $color-links !important;
+    color: $color-links;
+  }
+  &:focus:active {
+    border-color: $color-links !important;
+    color: $color-links;
+  }
+}

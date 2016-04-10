@@ -1,4 +1,4 @@
-# Career Development Project
+# Stylekyll 2
 
 Based on [*generator-jekyllized*](https://github.com/sondr3/generator-jekyllized).
 

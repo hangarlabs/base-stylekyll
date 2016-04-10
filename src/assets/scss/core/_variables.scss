@@ -25,9 +25,9 @@ $slick-font-path: "../fonts/";
 // Here should be defined all the colors that will be used on the entire page.
 //
 // Markup:
-// <div class="styleguide-color" style="background-color:#FE271E">$color-redorange</div>
-// <div class="styleguide-color" style="background-color:#383838">$color-mineshaft</div>
-// <div class="styleguide-color" style="background-color:#000000">$color-black</div>
+// <div class="styleguide-color" style="background-color:#FE271E">$color-links</div>
+// <div class="styleguide-color" style="background-color:#383838">$color-text</div>
+// <div class="styleguide-color" style="background-color:#000000">$color-icons</div>
 // <div class="styleguide-color" style="background-color:#FFFFFF;color:#000000">$color-white</div>
 // <div class="styleguide-color" style="background-color:#8B0000">$color-redberry</div>
 // <div class="styleguide-color" style="background-color:#CD0000">$color-guardsmanred</div>
@@ -37,11 +37,16 @@ $slick-font-path: "../fonts/";
 // <div class="styleguide-color" style="background-color:#1D3746">$color-bluedianne</div>
 // <div class="styleguide-color" style="background-color:#EDEBF0;color:#000000">$color-athensgray</div>
 //
-// Styleguide 1.2
+// Styleguide 1.03
 
 $color-redorange: #FE271E;
 $color-mineshaft: #383838;
 $color-black: #000000;
+
+$color-links: $color-redorange;
+$color-text: $color-mineshaft;
+$color-icons: $color-black;
+
 $color-white: #FFFFFF;
 $color-redberry: #8B0000;
 $color-guardsmanred: #CD0000;
@@ -50,14 +55,3 @@ $color-silver: #C0C0C0;
 $color-celery: #B0CC59;
 $color-bluedianne: #1D3746;
 $color-athensgray: #EDEBF0;
-
-
-
-//== Typography
-//
-//## Font, line-height, and color for body text, headings, and more.
-
-$font-family-sans-serif: "Trade Gothic W01", Helvetica, Arial, sans-serif;
-$font-family-serif: "Plantin W01", "Times New Roman", Times, serif;
-$font-family-base: $font-family-sans-serif;
-$font-size-base: 18px;

@@ -1,0 +1,102 @@
+// Grid System
+//
+// Location: scss/vendors/bootstrap/_grid.scss
+//
+// Markup:
+// <div class="grid-styleguide">
+// 	<h4>12 Columns</h4>
+// 	<div class="container-fluid">
+// 	 <div class="row">
+// 	   <div class="col-xs-1"><div class="grid-styleguide-column-example"></div></div>
+// 	   <div class="col-xs-1"><div class="grid-styleguide-column-example"></div></div>
+// 	   <div class="col-xs-1"><div class="grid-styleguide-column-example"></div></div>
+// 	   <div class="col-xs-1"><div class="grid-styleguide-column-example"></div></div>
+// 	   <div class="col-xs-1"><div class="grid-styleguide-column-example"></div></div>
+// 	   <div class="col-xs-1"><div class="grid-styleguide-column-example"></div></div>
+// 	   <div class="col-xs-1"><div class="grid-styleguide-column-example"></div></div>
+// 	   <div class="col-xs-1"><div class="grid-styleguide-column-example"></div></div>
+// 	   <div class="col-xs-1"><div class="grid-styleguide-column-example"></div></div>
+// 	   <div class="col-xs-1"><div class="grid-styleguide-column-example"></div></div>
+// 	   <div class="col-xs-1"><div class="grid-styleguide-column-example"></div></div>
+// 	   <div class="col-xs-1"><div class="grid-styleguide-column-example"></div></div>
+// 	 </div>
+// 	</div>
+// 	<h4>Size 1 of 1</h4>
+// 	<div class="container-fluid">
+// 	 <div class="row">
+// 	   <div class="col-xs-12"><div class="grid-styleguide-example"><h4>1/1<br />col-xs-12</h4></div></div>
+// 	 </div>
+// 	</div>
+// 	<h4>Size 1 of 2</h4>
+// 	<div class="container-fluid">
+// 	 <div class="row">
+// 	   <div class="col-xs-6"><div class="grid-styleguide-example"><h4>1/2<br />col-xs-6</h4></div></div>
+// 	   <div class="col-xs-6"><div class="grid-styleguide-example"><h4>1/2<br />col-xs-6</h4></div></div>
+// 	 </div>
+// 	</div>
+// 	<h4>Size 1 of 3</h4>
+// 	<div class="container-fluid">
+// 	 <div class="row">
+// 	   <div class="col-xs-4"><div class="grid-styleguide-example"><h4>1/3<br />col-xs-4</h4></div></div>
+// 	   <div class="col-xs-4"><div class="grid-styleguide-example"><h4>1/3<br />col-xs-4</h4></div></div>
+// 	   <div class="col-xs-4"><div class="grid-styleguide-example"><h4>1/3<br />col-xs-4</h4></div></div>
+// 	 </div>
+// 	</div>
+// 	<h4>Size 1 of 4</h4>
+// 	<div class="container-fluid">
+// 	 <div class="row">
+// 	   <div class="col-xs-3"><div class="grid-styleguide-example"><h4>1/4<br />col-xs-3</h4></div></div>
+// 	   <div class="col-xs-3"><div class="grid-styleguide-example"><h4>1/4<br />col-xs-3</h4></div></div>
+// 	   <div class="col-xs-3"><div class="grid-styleguide-example"><h4>1/4<br />col-xs-3</h4></div></div>
+// 	   <div class="col-xs-3"><div class="grid-styleguide-example"><h4>1/4<br />col-xs-3</h4></div></div>
+// 	 </div>
+// 	</div>
+// 	<h4>Size 1 of 8</h4>
+// 	<div class="container-fluid">
+// 	 <div class="row">
+// 	   <div class="col-xs-8ths"><div class="grid-styleguide-example"><h4>1/8<br />col-xs-8ths</h4></div></div>
+// 	   <div class="col-xs-8ths"><div class="grid-styleguide-example"><h4>1/8<br />col-xs-8ths</h4></div></div>
+// 	   <div class="col-xs-8ths"><div class="grid-styleguide-example"><h4>1/8<br />col-xs-8ths</h4></div></div>
+// 	   <div class="col-xs-8ths"><div class="grid-styleguide-example"><h4>1/8<br />col-xs-8ths</h4></div></div>
+// 	   <div class="col-xs-8ths"><div class="grid-styleguide-example"><h4>1/8<br />col-xs-8ths</h4></div></div>
+// 	   <div class="col-xs-8ths"><div class="grid-styleguide-example"><h4>1/8<br />col-xs-8ths</h4></div></div>
+// 	   <div class="col-xs-8ths"><div class="grid-styleguide-example"><h4>1/8<br />col-xs-8ths</h4></div></div>
+// 	   <div class="col-xs-8ths"><div class="grid-styleguide-example"><h4>1/8<br />col-xs-8ths</h4></div></div>
+// 	 </div>
+// 	</div>
+// </div>
+//
+// Styleguide 1.01
+
+// Create 8 columns layout
+.col-xs-8ths,
+.col-sm-8ths,
+.col-md-8ths,
+.col-lg-8ths {
+  position: relative;
+  min-height: 1px;
+  padding-left:  ceil(($grid-gutter-width / 2));
+  padding-right: floor(($grid-gutter-width / 2));
+}
+.col-xs-8ths {
+  width: 12.5%;
+  float: left;
+}
+@media (min-width: $screen-sm-min) {
+  .col-sm-8ths {
+    width: 12.5%;
+    float: left;
+  }
+}
+@media (min-width: $screen-md-min) {
+  .col-md-8ths {
+    width: 12.5%;
+    float: left;
+  }
+}
+@media (min-width: $screen-lg-min) {
+  .col-lg-8ths {
+    width: 12.5%;
+    float: left;
+  }
+}

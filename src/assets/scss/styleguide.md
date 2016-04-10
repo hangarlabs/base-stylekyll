@@ -7,28 +7,34 @@ Welcome to Career Development Tool CSS Styleguide staring point for developers.
 The styleguide should be organized by numbered sections. These sections can go as deep as you like. Every component should have a numbered section to refer to. For example:
 
     1. Design
-      1.1 Logo
-      1.2 Colors
-      1.3 Icons
-      1.4 Navigation
-      1.5 Typography
+      1.01 Grid System
+      1.02 Logo
+      1.03 Colors
+      1.04 Typography
+      1.05 Icons
+      1.06 Buttons
+      1.07 Button Links
+      1.08 Forms
     2. Components
-      2.1 Accordions
-      2.2 Alerts
-      2.3 Breadcrumbs
-      2.4 Buttons
-      2.5 Charts
-      2.6 Evaluation Ranking
-      2.7 Grid System
-      2.8 Lists
-      2.9 Paginator
-      2.10 Search
-      2.11 Tables
+      2.01 Breadcrumbs
+      2.02 Score Slider
+      2.03 Steps
+      2.04 Paginator
+      2.05 Progress Bar
+      2.06 Alerts
+      2.07 Charts
+      2.08 Tabs
+      2.09 Lists
+      2.10 Tables
+      2.11 Search
+      2.12 Dropdown
+      2.13 Accordions
+      2.14 Evaluation Ranking
     3. Modules
-      3.1 Footer
-      3.2 Header
-      3.3 Hero
-      3.4 Log In
+      3.01 Footer
+      3.02 Nav
+      3.03 Login
+      3.04 Hero
 
 We are using [*bootstrap-sass*](https://github.com/twbs/bootstrap-sass) as starting point to speed up the process of building the styleguide as we can see bootstrap already has some components we need. 
 

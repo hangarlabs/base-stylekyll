@@ -8,11 +8,16 @@
 // <h3>36 px, Trade gothic bold n0. 20</h3>
 // <h4>20 px, Trade gothic bold n0. 20</h4>
 // <h5>18px, Trade gothic bold no. 18</h5>
-// <h6>18 px, Plantin Regular</h6>
 // <p>14 px, Trade Gothic Bold No. 2</p>
+// <h6>18 px, Plantin Regular</h6>
 // <h6><span>12 px, Plantin Regular</span></h6>
 //
-// Styleguide 1.4
+// Styleguide 1.04
+
+// Text Transform
+h1, .h1, h3, .h3, h4, .h4, h5, .h5 {
+  text-transform: uppercase;
+}
 
 // Font Face
 h1, .h1, h3, .h3, h4, .h4 { // Trade Gothic Bold No.20

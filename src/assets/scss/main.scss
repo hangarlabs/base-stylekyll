@@ -20,10 +20,29 @@ The main SCSS file for everything, yep
 // endbower
 
 // Custom Vendors Modules
-@import "vendors/myvendor";
+@import "vendors/bootstrap/grid";
+@import "vendors/bootstrap/buttons";
+@import "vendors/bootstrap/forms";
+@import "vendors/bootstrap/breadcrumbs";
+@import "vendors/bootstrap/paginator";
+@import "vendors/bootstrap/progress-bar";
+@import "vendors/bootstrap/alerts";
+@import "vendors/bootstrap/tabs";
+@import "vendors/bootstrap/lists";
+@import "vendors/bootstrap/tables";
+@import "vendors/bootstrap/dropdowns";
+@import "vendors/bootstrap/accordions";
 
 // Custom Modules
-@import "modules/mymodule";
+@import "modules/score-slider";
+@import "modules/steps";
+@import "modules/charts";
+@import "modules/search";
+@import "modules/evaluation-ranking";
+@import "modules/footer";
+@import "modules/nav";
+@import "modules/login";
+@import "modules/hero";
 
 // Pages
 @import "pages/mypage";

@@ -2,12 +2,6 @@
 // Mixins
 // --------------------------------------------------
 
-// core/_fonts.scss
-
-@mixin fontArial() {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; // Arial
-}
-
 @mixin breakpoint($points) {
   @each $point in $points {
     @if $point == large {
@@ -54,6 +48,31 @@
     @else if $point == phone-landscape {
       @media (max-width: $screen-xs-max) and (orientation: landscape)  { @content; }
     }
+  }
+}
+
+// Background Color, Border Color, Color, Hover Background Color, Hover Border Color, Hover Color, Pressed Background Color, Pressed Border Color, Pressed Color
+@mixin cdt-btn($bkg-col, $brd-col, $col, $hov-bkg-col, $hov-brd-col, $hov-col, $press-bkg-col, $press-brd-col, $press-col) {
+  background-color: $bkg-col;
+  border-color: $brd-col;
+  color: $col;
+  &:focus {
+    background-color: $bkg-col;
+    border-color: $brd-col;
+    color: $col;
+  }
+  &:hover,
+  &:active {
+    background-color: $hov-bkg-col;
+    border-color: $hov-brd-col;
+    color: $hov-col;
+  }
+  &:focus:active {
+    background-color: $press-bkg-col;
+    border-color: $press-brd-col;
+    color: $press-col;
+    outline: 0;
+    box-shadow: none;
   }
 }
 
