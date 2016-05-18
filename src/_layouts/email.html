@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html xmlns:v="urn:schemas-microsoft-com:vml" style="-webkit-text-size-adjust: none;" lang="en">
+  {% include emails/head.html %}
+  <body style="background-color:#FFFFFF; width:100%;" bgcolor="#FFFFFF" width="100%">
+    <table width="100%" style="background-color:#FFFFFF; width:100% !important;" bgcolor="#FFFFFF" cellspacing="0" cellpadding="0" align="center">
+      <tr>
+        <td>
+          <table class="mobileWidth" width="600" cellspacing="0" cellpadding="0" align="center">
+            <tr>
+              <td class="mobileWidth" width="100%" cellspacing="0" cellpadding="0" >
+                <!-- for the background color on gmail, yahoo mail and outlook -->
+                <table class="mobileWidth" style="background-color:#FFFFFF;" bgcolor="#FFFFFF"  cellspacing="0" cellpadding="0" width="100%">
+                  <tr>
+                    <td style="padding:0;">
+                      <!-- Wrapper/Container Table: Use a wrapper table to control the width and the background color consistently of your email. Use this approach instead of setting attributes on the body tag. -->
+                      <table class="mobileWidth" bgcolor="#FFFFFF" width="100%" style="background-color: #FFFFFF; line-height: 100% !important; margin: 0 auto; padding: 0px;" cellspacing="0" border="0" id="backgroundTable">
+                        <tr>
+                          <td style="padding:0;">
+
+                            {% include emails/header.html %}
+
+                            {{ content }}
+
+                            {% include emails/footer.html %}
+
+                          </td>
+                        </tr>
+                      </table>
+                      <!-- End of wrapper table -->
+                    </td>
+                  </tr>
+                </table>
+                <!-- end table for background color -->
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

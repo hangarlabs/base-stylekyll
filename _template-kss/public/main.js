@@ -91,5 +91,10 @@
             $(this).next().slideToggle();
         });
 
+        $('.kss-section').each(function(index, value) {
+            var id = $(value).attr('id');
+            id = id.replace('.', '-');
+            $(value).addClass(id);
+        });
     });
 }(jQuery));

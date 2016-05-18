@@ -2,4 +2,74 @@
 //
 // Location: scss/vendors/bootstrap/_tabs.scss
 //
-// Styleguide 2.08
+// Markup:
+// <div class="container-fluid">
+//   <div class="row">
+//     <div class="col-xs-12">
+//       <ul class="nav nav-tabs" role="tablist">
+//         <li role="presentation" class="col-xs-8ths nav-item active"><a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">8.6<span>Average</span></a></li>
+//         <li role="presentation" class="col-xs-8ths nav-item"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">7.6<span>Daniel Howell</span></a></li>
+//         <li role="presentation" class="col-xs-8ths nav-item"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">9<span>Daniel Howell</span></a></li>
+//         <li role="presentation" class="col-xs-8ths nav-item"><a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab">6.5<span>Daniel Howell</span></a></li>
+//          <li role="presentation" class="col-xs-8ths nav-item active"><a href="#tab5" aria-controls="tab5" role="tab" data-toggle="tab">9.2<span>Daniel Howell</span></a></li>
+//         <li role="presentation" class="col-xs-8ths nav-item"><a href="#tab6" aria-controls="tab6" role="tab" data-toggle="tab">6.8<span>Daniel Howell</span></a></li>
+//         <li role="presentation" class="col-xs-8ths nav-item"><a href="#tab7" aria-controls="tab7" role="tab" data-toggle="tab">7.6<span>Daniel Howell</span></a></li>
+//         <li role="presentation" class="col-xs-8ths nav-item"><a href="#tab8" aria-controls="tab8" role="tab" data-toggle="tab">5<span>Daniel Howell</span></a></li>
+//       </ul>
+//       <div class="tab-content">
+//         <div role="tabpanel" class="tab-pane active" id="tab1">tab1</div>
+//         <div role="tabpanel" class="tab-pane" id="tab2">tab2</div>
+//         <div role="tabpanel" class="tab-pane" id="tab3">tab3</div>
+//         <div role="tabpanel" class="tab-pane" id="tab4">tab4</div>
+//         <div role="tabpanel" class="tab-pane" id="tab5">tab5</div>
+//         <div role="tabpanel" class="tab-pane" id="tab6">tab6</div>
+//         <div role="tabpanel" class="tab-pane" id="tab7">tab7</div>
+//         <div role="tabpanel" class="tab-pane" id="tab8">tab8</div>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 2.09
+
+.nav-tabs {
+	> .nav-item {
+		padding: 0;
+		> a {
+			text-align: center;
+			margin-right: 0;
+			border: none;
+			border-bottom: 3px solid $color-silver;
+			color: $color-text;
+			font-family: "Trade Gothic W01";
+		  font-style: normal;
+		  font-weight: 700;
+		  font-size: 20px;
+  		line-height: 25px;
+  		height: 82px;
+  		span {
+  			position: absolute;
+		    top: 34px;
+		    width: 100%;
+		    left: 0;
+			  font-weight: 800;
+			  font-size: 14px;
+  			line-height: 19px;
+  		}
+		}
+		&.active {
+			> a,
+				a:hover,
+				a:focus {
+				border: none;
+				border-bottom: 3px solid $color-links;
+				color: $color-links;
+			}
+		}
+	}
+}
+.tab-content {
+  .tab-pane {
+    margin-top: 25px;
+  }
+}

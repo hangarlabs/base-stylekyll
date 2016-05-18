@@ -14,7 +14,8 @@ The styleguide should be organized by numbered sections. These sections can go a
       1.05 Icons
       1.06 Buttons
       1.07 Button Links
-      1.08 Forms
+      1.08 Special Buttons
+      1.09 Forms
     2. Components
       2.01 Breadcrumbs
       2.02 Score Slider
@@ -22,14 +23,14 @@ The styleguide should be organized by numbered sections. These sections can go a
       2.04 Paginator
       2.05 Progress Bar
       2.06 Alerts
-      2.07 Charts
-      2.08 Tabs
-      2.09 Lists
-      2.10 Tables
-      2.11 Search
-      2.12 Dropdown
-      2.13 Accordions
-      2.14 Evaluation Ranking
+      2.07 Modal Alerts
+      2.08 Charts
+      2.09 Tabs
+      2.10 Lists
+      2.11 Tables
+      2.12 Search
+      2.13 Dropdown
+      2.14 Accordions
     3. Modules
       3.01 Footer
       3.02 Nav
@@ -66,6 +67,8 @@ KSS’s documentation syntax is human readable, but just structured enough to be
 #### How to generate the styleguide ?
 
 *We are using a custom template to make the generated styleguide look better. You can find the template in **_template-kss** folder.*
+
+*Please keep in mind that you will have to change all your '**container**'s div's por '**container-fluid**' to look better on the styleguide, since it does not have all the space as you normally have it.*
 
 Compiling the styleguide (This is automatically done with **gulp**)
     

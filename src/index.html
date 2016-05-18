@@ -4,12 +4,12 @@ title: Career Development Tool Templates
 regenerate: true
 ---
 
-<div class="container" style="margin-top: 30px;">
+<div class="container" style="margin-top: 25px;">
   <div class="row">
     <div class="col-xs-12">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h2 class="panel-title" style="font-size: 30px; line-height: 32px; text-transform: uppercase;">Styleguide</h2>
+          <h3 class="panel-title">Styleguide</h3>
         </div>
         <div class="panel-body">
           <ul class="list-unstyled list-group">
@@ -21,12 +21,28 @@ regenerate: true
       </div>
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h2 class="panel-title" style="font-size: 30px; line-height: 32px; text-transform: uppercase;">Career Development Tool Templates</h2>
+          <h3 class="panel-title">Career Development Tool Templates</h3>
         </div>
         <div class="panel-body">
           <ul class="list-unstyled list-group">
             {% for page in site.pages %}
-              {% if page.title != 'Career Development Tool Templates' %}
+              {% if page.title != 'Career Development Tool Templates' and page.layout != 'email' %}
+                <li class="list-group-item" style="font-size: 16px; line-height: 25px;">
+                  <a class="post-link" href="{{ page.path }}" target="_blank">{{ page.title }}</a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Emails</h3>
+        </div>
+        <div class="panel-body">
+          <ul class="list-unstyled list-group">
+            {% for page in site.pages %}
+              {% if page.layout == 'email' %}
                 <li class="list-group-item" style="font-size: 16px; line-height: 25px;">
                   <a class="post-link" href="{{ page.path }}" target="_blank">{{ page.title }}</a>
                 </li>

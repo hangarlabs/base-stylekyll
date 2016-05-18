@@ -2,4 +2,93 @@
 //
 // Location: scss/vendors/bootstrap/_forms.scss
 //
-// Styleguide 1.08
+// Markup:
+// <div class="container">
+//   <div class="row">
+//     <div class="col-xs-12">
+//       <form>
+//         <div class="cm-cdt-m-dropdown is-select">
+//           <select placeholder="Select an option...">
+//             <option value="all-employees">All Employees</option>
+//             <option value="all-career-developers">All Career Developers</option>
+//             <option value="career-developer-01">Career Developer 01</option>
+//             <option value="career-developer-02">Career Developer 02</option>
+//           </select>
+//         </div>
+//       </form>
+//     </div>
+//   </div>
+// </div>
+// <div class="container">
+//   <div class="row">
+//     <div class="col-xs-12">
+//       <form>
+//         <div class="cm-cdt-m-dropdown is-autocomplete">
+//           <h3 class="selectize-who-evaluator">Who is your first evaluator?*</h3>
+//           <select data-url="/api/users.json" placeholder="Select an evaluator..." required>
+//             <option value=""></option>
+//           </select>
+//           <h4 class="selectize-evaluator selectize-second-steps hide">First Evaluator: <span class="selectize-dynamic-value"></span></h4>
+//           <div class="selectize-relationship-evaluator selectize-second-steps hide">
+//             <h3>Describe Your Employment Relationship With <span class="selectize-dynamic-value"></span></h3>
+//             <input type="text" class="selectize-relationship-input" id="firstEmploymentRelationship" placeholder="Employment Relationship...">
+//           </div>
+//           <div class="selectize-peer selectize-second-steps hide">
+//             <button class="btn btn-primary" type="submit">Add Peer</button>
+//             <span>Or Press Enter</span>
+//           </div>
+//         </div>
+//       </form>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 1.09
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+::-webkit-input-placeholder {
+	color: $color-silver;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+	color: $color-silver;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+	color: $color-silver;  
+}
+
+:-ms-input-placeholder {  
+	color: $color-silver;  
+}
+
+textarea {
+  width: 100%;
+  border: none;
+  resize: none;
+  height: 90px;
+  font-family: "Plantin W01";
+  font-size: 14px;
+}
+
+.#{$prefix}-m-login {
+	input {
+		border: none;
+		border-bottom: 1px solid $color-silver;
+		box-shadow: none;
+		border-radius: 0;
+		background-color: transparent;
+		text-transform: uppercase;
+		color: $color-text;
+		font-family: "Trade Gothic W01";
+		font-style: normal;
+	  font-weight: 400;
+		font-size: 18px;
+		line-height: 25px;
+	}
+}

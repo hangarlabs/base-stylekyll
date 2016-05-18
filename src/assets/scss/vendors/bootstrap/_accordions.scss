@@ -2,4 +2,215 @@
 //
 // Location: scss/vendors/bootstrap/_accordions.scss
 //
-// Styleguide 2.13
+// Markup:
+// <div class="container-fluid">
+// 	<div class="cm-cdt-m-accordion is-cd">
+// 		<div class="row">
+// 			<div class="col-xs-9 accordion-title">
+// 				<h4>Career Developer Evaluation</h4>
+// 			</div>
+// 			<div class="col-xs-2">
+// 				<span class="score-box bg-perfect">Score: 10</span>
+// 			</div>
+// 			<div class="col-xs-1 text-right">
+// 				<a href="#cdCollapse" role="button" data-toggle="collapse" class="toggle-collpase plus collapsed" aria-expanded="false" aria-controls="cdCollapse"><svg class="icon icon-plus"><use xlink:href="#plus"></use></svg></a>
+// 				<a href="#cdCollapse" role="button" data-toggle="collapse" class="toggle-collpase less collapsed" aria-expanded="false" aria-controls="cdCollapse"><svg class="icon icon-less"><use xlink:href="#less"></use></svg></a>
+// 			</div>
+// 		</div>
+// 		<div class="row collapse" id="cdCollapse">
+// 		  <div class="col-xs-12">
+// 		  	<h4>Freddy’s General Score Is <span class="color-perfect">10</span></h4>
+// 		  </div>
+// 		  <div class="col-xs-5ths cd-score"><span class="color-perfect">10</span>Talent</div>
+// 		  <div class="col-xs-5ths cd-score"><span class="color-high">9</span>Quality</div>
+// 		  <div class="col-xs-5ths cd-score"><span class="color-high">8</span>Honest/Real</div>
+// 		  <div class="col-xs-5ths cd-score"><span class="color-medium">7</span>Driven</div>
+// 		  <div class="col-xs-5ths cd-score"><span class="color-medium">6</span>Culture</div>
+// 		  <div class="col-xs-5ths cd-score"><span class="color-low">5</span>Innovation</div>
+// 		  <div class="col-xs-5ths cd-score"><span class="color-low">4</span>Collaboration</div>
+// 		  <div class="col-xs-5ths cd-score"><span class="color-low">3</span>Inspired</div>
+// 		  <div class="col-xs-5ths cd-score"><span class="color-low">2</span>Passionate</div>
+// 		  <div class="col-xs-5ths cd-score"><span class="color-low">1</span>Recommendation</div>
+// 		  <div class="col-xs-12">
+// 		  	<h4>Comments</h4>
+// 		  	<h6><span>This employee has been excellent. Quantity of work produced is outs tanding. Managers and co-workers have commented on high levels of accuracy and work productivity. This employee has been excellent. Quantity of work produced is outstanding. Managers and co-workers have commented on high levels of accuracy and work productivity. This employee has been excellent. Quantity of work produced is outstanding. Managers and co-workers have commented on high levels of accuracy and work productivity.</span></h6>
+// 		  	<h4>Focus Areas</h4>
+// 		  	<h6><span>This employee has been excellent. Quantity of work produced is outs tanding. Managers and co-workers have commented on high levels of accuracy and work productivity. This employee has been excellent. Quantity of work produced is outstanding. Managers and co-workers have commented on high levels of accuracy and work productivity. This employee has been excellent. Quantity of work produced is outstanding. Managers and co-workers have commented on high levels of accuracy and work productivity.</span></h6>
+// 		  </div>
+// 		</div>
+// 	</div>
+// </div>
+// <div class="container-fluid">
+//   <div class="row">
+//     <div class="col-xs-12">
+//       <div class="cm-cdt-m-accordion is-peers">
+//         <div class="accordion-title">
+//           <h4>Peers Evaluation</h4>
+//         </div>
+//         <ul class="nav nav-tabs" role="tablist">
+//           <li role="presentation" class="col-xs-9ths nav-item active"><a href="#accordionTab1" aria-controls="accordionTab1" role="tab" data-toggle="tab">8.6<span>Average</span></a></li>
+//           <li role="presentation" class="col-xs-9ths nav-item"><a href="#accordionTab2" aria-controls="accordionTab2" role="tab" data-toggle="tab">7.6<span>Daniel Howell</span></a></li>
+//           <li role="presentation" class="col-xs-9ths nav-item"><a href="#accordionTab3" aria-controls="accordionTab3" role="tab" data-toggle="tab">9<span>Daniel Howell</span></a></li>
+//           <li role="presentation" class="col-xs-9ths nav-item"><a href="#accordionTab4" aria-controls="accordionTab4" role="tab" data-toggle="tab">6.5<span>Daniel Howell</span></a></li>
+//            <li role="presentation" class="col-xs-9ths nav-item"><a href="#accordionTab5" aria-controls="accordionTab5" role="tab" data-toggle="tab">9.2<span>Daniel Howell</span></a></li>
+//           <li role="presentation" class="col-xs-9ths nav-item"><a href="#accordionTab6" aria-controls="accordionTab6" role="tab" data-toggle="tab">6.8<span>Daniel Howell</span></a></li>
+//           <li role="presentation" class="col-xs-9ths nav-item"><a href="#accordionTab7" aria-controls="accordionTab7" role="tab" data-toggle="tab">7.6<span>Daniel Howell</span></a></li>
+//           <li role="presentation" class="col-xs-9ths nav-item"><a href="#accordionTab8" aria-controls="accordionTab8" role="tab" data-toggle="tab">5<span>Daniel Howell</span></a></li>
+//           <li role="presentation" class="col-xs-9ths nav-item">
+//             <a href="#peersCollapse" role="button" data-toggle="collapse" class="toggle-collpase plus collapsed" aria-expanded="false" aria-controls="peersCollapse"><svg class="icon icon-plus"><use xlink:href="#plus"></use></svg></a>
+//             <a href="#peersCollapse" role="button" data-toggle="collapse" class="toggle-collpase less collapsed" aria-expanded="false" aria-controls="peersCollapse"><svg class="icon icon-less"><use xlink:href="#less"></use></svg></a>
+//           </li>
+//         </ul>
+//         <div class="collapse" id="peersCollapse">
+//           <div class="tab-content">
+//             <div role="tabpanel" class="tab-pane active" id="accordionTab1">tab1</div>
+//             <div role="tabpanel" class="tab-pane" id="accordionTab2">tab2</div>
+//             <div role="tabpanel" class="tab-pane" id="accordionTab3">tab3</div>
+//             <div role="tabpanel" class="tab-pane" id="accordionTab4">tab4</div>
+//             <div role="tabpanel" class="tab-pane" id="accordionTab5">tab5</div>
+//             <div role="tabpanel" class="tab-pane" id="accordionTab6">tab6</div>
+//             <div role="tabpanel" class="tab-pane" id="accordionTab7">tab7</div>
+//             <div role="tabpanel" class="tab-pane" id="accordionTab8">tab8</div>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+// <div class="container-fluid">
+// 	<div class="cm-cdt-m-accordion is-old">
+// 		<div class="row">
+// 			<div class="col-xs-11 accordion-title">
+// 				<h4>2015</h4>
+// 			</div>
+// 			<div class="col-xs-1 text-right">
+// 				<!-- Accordion Toggles -->
+// 				<a href="#oldCollapse" role="button" data-toggle="collapse" class="toggle-collpase plus collapsed" aria-expanded="false" aria-controls="oldCollapse"><svg class="icon icon-plus"><use xlink:href="#plus"></use></svg></a>
+// 				<a href="#oldCollapse" role="button" data-toggle="collapse" class="toggle-collpase less collapsed" aria-expanded="false" aria-controls="oldCollapse"><svg class="icon icon-less"><use xlink:href="#less"></use></svg></a>
+// 			</div>
+// 		</div>
+// 		<div class="row collapse" id="oldCollapse">
+// 		  <div class="col-xs-12 discipline-score">
+//         <a href="#" class="col-xs-3 disciplines">
+//           <h5>Q1 Assessment</h5>
+//           <div class="bg-high">
+//             <span class="h1">9.4</span>
+//             <br />
+//             <span class="p">score</span>
+//           </div>
+//         </a>
+//         <a href="#" class="col-xs-3 disciplines">
+//           <h5>Q2 Assessment</h5>
+//           <div class="bg-medium">
+//             <span class="h1">6.5</span>
+//             <br />
+//             <span class="p">score</span>
+//           </div>
+//         </a>
+//         <a href="#" class="col-xs-3 disciplines">
+//           <h5>Q3 Assessment</h5>
+//           <div class="bg-low">
+//             <span class="h1">5.5</span>
+//             <br />
+//             <span class="p">score</span>
+//           </div>
+//         </a>
+//         <a href="#" class="col-xs-3 disciplines">
+//           <h5>Q4 Assessment</h5>
+//           <div class="bg-perfect">
+//             <span class="h1">10</span>
+//             <br />
+//             <span class="p">score</span>
+//           </div>
+//         </a>
+//       </div>
+// 		</div>
+// 	</div>
+// </div>
+//
+// Styleguide 2.14
+
+.#{$prefix}-m-accordion {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	h4 {
+		margin-top: 30px;
+		margin-bottom: 0;
+	}
+	h6 {
+		line-height: 15px;
+		margin-top: 5px;
+		span {
+			font-size: 14px;
+			line-height: 25px;
+		}
+	}
+	.accordion-title {
+		h4 {
+			margin-top: 0;
+			font-size: 26px;
+			line-height: 31px;
+		}
+	}
+	.toggle-collpase {
+		padding-top: 10px;
+		display: block;
+		text-align: right !important;
+		color: $color-icons;
+		&.plus {
+			display: none;
+		}
+		&.collapsed {
+			&.plus {
+				display: block;
+			}
+			&.less {
+				display: none;
+			}
+		}
+	}
+	&.is-cd {
+		overflow: hidden;
+		padding-top: 15px;
+		padding-bottom: 20px;
+		border-top: 1px solid $color-silver;
+		border-bottom: 1px solid $color-silver;
+		.accordion-title {
+			h4 {
+				margin-top: 10px;
+			}
+		}
+		.score-box {
+			position: relative;
+    	left: 58px;
+		}
+	}
+	&.is-peers {
+		overflow: hidden;
+		padding-top: 25px;
+		border-top: 1px solid $color-silver;
+		.accordion-title {
+			margin-bottom: 20px;
+		}
+		.tab-pane {
+			padding-top: 40px;
+			padding-bottom: 40px;
+			border-bottom: 1px solid $color-silver;
+		}
+	}
+	&.is-old {
+		overflow: hidden;
+		padding-top: 15px;
+		padding-bottom: 20px;
+		border-top: 1px solid $color-silver;
+		border-bottom: 1px solid $color-silver;
+		.accordion-title {
+			h4 {
+				margin-top: 10px;
+				font-size: 20px;
+    		line-height: 25px;
+    		padding: 0;
+			}
+		}
+	}
+}

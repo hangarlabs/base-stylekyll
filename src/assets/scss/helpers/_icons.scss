@@ -36,6 +36,7 @@
 // <svg class="icon icon-notification"><use xlink:href="#notification"></use></svg>
 // <svg class="icon icon-notification-alert"><use xlink:href="#notification-alert"></use></svg>
 // <svg class="icon icon-profile"><use xlink:href="#profile"></use></svg>
+// <svg class="icon icon-logout"><use xlink:href="#logout"></use></svg>
 //
 // Styleguide 1.05
 
@@ -46,6 +47,18 @@
 }
 
 // Fill
+#close,
+#arrow,
+#delete,
+#notification,
+#notification-alert,
+#logout,
+#plus,
+#less {
+	path {
+		fill: currentColor;
+	}
+}
 
 // Sizes
 .icon-logo-large {
@@ -97,11 +110,7 @@
 	height: 44px;
 }
 
-.icon-notification {
-	width: 53px;
-	height: 53px;
-}
-
+.icon-notification,
 .icon-notification-alert {
 	width: 53px;
 	height: 53px;
@@ -110,4 +119,116 @@
 .icon-profile {
 	width: 50px;
 	height: 55px;
+}
+
+.icon-logout {
+	width: 45px;
+	height: 49px;
+}
+
+.#{$prefix}-pt-evaluation {
+	.icon-talent-potential-star,
+	.icon-talent-shapeuporshipout,
+	.icon-talent-solid-reliable,
+	.icon-talent-star {
+		width: 40px;
+    height: 40px;
+    margin-left: 10px;
+	}
+}
+
+.table {
+	.icon-completed,
+	.icon-in-progress,
+	.icon-uncompleted {
+		width: 26px;
+		height: 26px;
+	}
+	.icon-arrow {
+		width: 26px;
+		height: 14px;
+	}
+	.icon-delete {
+		width: 24px;
+		height: 24px;
+	}
+}
+
+.#{$prefix}-m-footer {
+	.icon-logo-small {
+		width: 34px;
+		height: 34px;
+	}
+}
+
+.#{$prefix}-m-login {
+	.icon-logo-large {
+		width: 494px;
+    height: 106px;
+	}
+}
+
+.#{$prefix}-m-search {
+	.icon-search {
+		width: 26px;
+		height: 26px;
+	}
+}
+
+.#{$prefix}-m-nav {
+	.icon-notification,
+	.icon-notification-alert {
+		width: 28px;
+		height: 28px;
+	}
+	.icon-arrow {
+		width: 24px;
+		height: 12px;
+	}
+	.icon-logout {
+		width: 24px;
+		height: 26px;
+	}
+}
+
+.#{$prefix}-m-dropdown {
+	.icon-arrow {
+		width: 26px;
+		height: 14px;
+	}
+}
+
+.#{$prefix}-m-accordion {
+	.icon-plus,
+	.icon-less {
+		width: 26px;
+		height: 26px;
+	}
+}
+
+.#{$prefix}-m-lists {
+	.icon-talent-potential-star,
+	.icon-talent-shapeuporshipout,
+	.icon-talent-solid-reliable,
+	.icon-talent-star {
+		width: 26px;
+		height: 26px;
+		margin-left: 0;
+	}
+
+	.list-row {
+		.icon-talent-potential-star,
+		.icon-talent-shapeuporshipout,
+		.icon-talent-solid-reliable,
+		.icon-talent-star {
+			vertical-align: super;
+		}
+	}
+}
+
+.js-timeline-slider {
+	.icon-arrow {
+		width: 26px;
+		height: 14px;
+	}
 }

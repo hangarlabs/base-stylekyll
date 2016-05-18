@@ -9,6 +9,7 @@ The main SCSS file for everything, yep
 
 // Custom Helpers
 @import "helpers/mixins";
+@import "helpers/global";
 @import "helpers/utils";
 @import "helpers/icons";
 
@@ -17,6 +18,7 @@ The main SCSS file for everything, yep
 @import "core/typo";
 
 // bower:scss
+@import "bower_components/slick-carousel/slick/slick.scss";
 // endbower
 
 // Custom Vendors Modules
@@ -27,22 +29,19 @@ The main SCSS file for everything, yep
 @import "vendors/bootstrap/paginator";
 @import "vendors/bootstrap/progress-bar";
 @import "vendors/bootstrap/alerts";
+@import "vendors/bootstrap/modals";
 @import "vendors/bootstrap/tabs";
-@import "vendors/bootstrap/lists";
 @import "vendors/bootstrap/tables";
 @import "vendors/bootstrap/dropdowns";
+@import "vendors/selectize";
 @import "vendors/bootstrap/accordions";
 
 // Custom Modules
 @import "modules/score-slider";
 @import "modules/steps";
-@import "modules/charts";
+@import "modules/lists";
 @import "modules/search";
-@import "modules/evaluation-ranking";
 @import "modules/footer";
 @import "modules/nav";
 @import "modules/login";
 @import "modules/hero";
-
-// Pages
-@import "pages/mypage";

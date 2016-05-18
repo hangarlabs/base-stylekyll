@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <form>
+        <table class="table table-3">
+          <thead>
+            <tr>
+              <th>Peer</th>
+              <th>Employment Relation</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span>1</span> Adelia Johnson Depp</td>
+              <td>Worked with him on Citi on the last few months</td>
+              <td><a class="delete-peer" href="#"><svg class="icon icon-delete"><use xlink:href="#delete"></use></svg></a></td>
+            </tr>
+            <tr>
+              <td><span>2</span> Andrea Zuniga Rodríguez</td>
+              <td>Worked with him on Citi on the last few months</td>
+              <td><a class="delete-peer" href="#"><svg class="icon icon-delete"><use xlink:href="#delete"></use></svg></a></td>
+            </tr>
+            <tr>
+              <td><span>3</span> Freddy Felipe Umana</td>
+              <td>Worked with him on Citi on the last few months</td>
+              <td><a class="delete-peer" href="#"><svg class="icon icon-delete"><use xlink:href="#delete"></use></svg></a></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="cm-cdt-m-dropdown is-autocomplete">
+                  <select data-url="/api/users.json" placeholder="Add new peer" required>
+                    <option value=""></option>
+                  </select>
+                </div>
+              </td>
+              <td>
+                <input class="relation" type="text" placeholder="Peer relation">
+              </td>
+              <td><button type="submit" class="btn btn-sm btn-secondary add-peer">Add Peer</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </div>
+</div>

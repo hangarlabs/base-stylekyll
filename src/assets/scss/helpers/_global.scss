@@ -1,0 +1,172 @@
+.score-circle {
+  width: 82px;
+  height: 82px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 50%;
+  font-family: "Trade Gothic W01";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+  color: $color-white;
+}
+
+.score-box {
+  width: 110px;
+  height: 45px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  font-family: "Trade Gothic W01";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $color-white;
+}
+
+.cd-score {
+  font-family: "Trade Gothic W01";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  margin-top: 22px;
+  margin-bottom: 22px;
+  span {
+    width: 35px;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+
+.color-perfect { color: $color-celery; }
+.color-high { color: $color-silver; }
+.color-medium { color: $color-supernova; }
+.color-low { color: $color-guardsmanred; }
+.bg-perfect { background-color: $color-celery; }
+.bg-high { background-color: $color-silver; }
+.bg-medium { background-color: $color-supernova; }
+.bg-low { background-color: $color-guardsmanred; }
+
+.js-score-input {
+  width: 50px;
+  border: none;
+  border-bottom: 1px solid $color-athensgray;
+  text-align: center;
+}
+
+
+.cdt-copy {
+  h2, h3, h4, p {
+    margin: 0;
+  }
+  h2 {
+    font-family: "Trade Gothic W01";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 41px;
+    text-transform: uppercase;
+    padding-top: 30px;
+    a {
+      top: 45px;
+    }
+    + h4 {
+      padding-top: 50px;
+    }
+  }
+  h3 {
+    font-size: 26px;
+    line-height: 31px;
+    padding-top: 45px;
+    padding-bottom: 30px;
+    position: relative;
+    a {
+      top: 55px;
+    }
+  }
+  h2, h3 {
+    a {
+      position: absolute;
+      right: floor(($grid-gutter-width / 2));
+      font-size: 12px;
+      line-height: 12px;
+      text-decoration: underline;
+      color: $color-text;
+      font-weight: 800;
+    }
+    span:not([class^="color-"]) {
+      font-family: "Plantin W01";
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 12px;
+      text-transform: none;
+      margin-left: 15px;
+      margin-right: 15px;
+      &:first-child {
+        margin-left: 30px;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  h4 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  p {
+    font-family: "Plantin W01";
+    font-style: normal;
+    font-weight: 400;
+    padding-bottom: 30px;
+    line-height: 24px;
+  }
+  .copy-tabs {
+    padding-top: 5px;
+    padding-bottom: 20px;
+  }
+  .copy-scores {
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
+  .btn {
+    margin-top: 50px;
+  }
+}
+
+.discipline-score {
+  .disciplines {
+    border-right: 1px solid $color-silver;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+    text-decoration: none;
+    h5 {
+      color: $color-text;
+    }
+    &:nth-child(4n+0),
+    &:last-child {
+      border: none;
+    }
+    div {
+      color: $color-white;
+      padding: 10px 0;
+      width: 100%;
+      max-width: 170px;
+      margin: 0 auto;
+      .p {
+        font-size: 20px;
+      }
+    }
+  }
+  .disciplines:hover .bg-perfect { background-color: darken($color-celery, 7%); }
+  .disciplines:hover .bg-high { background-color: darken($color-silver, 7%); }
+  .disciplines:hover .bg-medium { background-color: darken($color-supernova, 7%); }
+  .disciplines:hover .bg-low { background-color: darken($color-guardsmanred, 7%); }
+}

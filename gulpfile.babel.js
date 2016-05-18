@@ -22,6 +22,8 @@ import autoprefixer from 'autoprefixer';
 import {argv} from 'yargs';
 import {stream as wiredep} from 'wiredep';
 
+var backendAssetsPath = '../backend/project/public/';
+
 // 'gulp clean:assets' -- deletes all assets except for images
 // 'gulp clean:images' -- deletes your images
 // 'gulp clean:dist' -- erases the dist folder
@@ -185,8 +187,11 @@ gulp.task('inject:head', () =>
   gulp.src('src/_includes/head.html')
     .pipe($.inject(gulp.src('.tmp/assets/stylesheets/*.css',
                             {read: false}), {ignorePath: '.tmp'}))
-    .pipe(gulp.dest('src/_includes')),
+    .pipe(gulp.dest('src/_includes'))
+);
 
+// 'gulp inject:head' -- injects our style.css file into the head of our HTML
+gulp.task('inject:styleguide:head', () =>
   gulp.src('_template-kss/index.html')
     .pipe($.inject(gulp.src('.tmp/assets/stylesheets/*.css',
                             {read: false}), {ignorePath: '.tmp'}))
@@ -198,8 +203,11 @@ gulp.task('inject:footer', () =>
   gulp.src('src/_includes/scripts.html')
     .pipe($.inject(gulp.src('.tmp/assets/javascript/*.js',
                             {read: false}), {ignorePath: '.tmp'}))
-    .pipe(gulp.dest('src/_includes')),
+    .pipe(gulp.dest('src/_includes'))
+);
 
+// 'gulp inject:footer' -- injects our index.js file into the end of our HTML
+gulp.task('inject:styleguide:footer', () =>
   gulp.src('_template-kss/index.html')
     .pipe($.inject(gulp.src('.tmp/assets/javascript/*.js',
                             {read: false}), {ignorePath: '.tmp'}))
@@ -304,6 +312,7 @@ gulp.task('serve', () => {
   browserSync({
     // tunnel: true,
     // open: false,
+    notify: false,
     server: {
       baseDir: ['.tmp', 'dist'],
       routes: {
@@ -318,7 +327,6 @@ gulp.task('serve', () => {
   gulp.watch('src/assets/scss/**/*.scss', gulp.series('styles', 'clean:styleguide', 'jekyll', 'styleguide', reload));
   gulp.watch('src/assets/images/svg/*.svg', gulp.series('svg', 'svg-styleguide'));
   gulp.watch('src/assets/images/**/*', gulp.series('images', reload));
-  gulp.watch('bower.json', gulp.series('wiredep', 'fonts'));
   gulp.watch(['_template-kss/index.html', 'src/assets/scss/styleguide.md'], gulp.series('clean:styleguide', 'jekyll', 'styleguide', reload));
   gulp.watch('_template-kss/public/**/*.less', gulp.series('clean:styleguide:css', 'styleguide-less', 'jekyll', 'styleguide', reload));
 });
@@ -372,7 +380,7 @@ gulp.task('assets:copy', () =>
 // 'gulp --prod' -- same as above but with production settings
 gulp.task('default', gulp.series(
   gulp.series('clean:assets', 'clean:gzip', 'clean:styleguide'),
-  gulp.series('assets', 'inject:head', 'inject:footer'),
+  gulp.series('assets', 'wiredep', 'inject:head', 'inject:styleguide:head', 'inject:footer', 'inject:styleguide:footer'),
   gulp.series('jekyll', 'styleguide', 'assets:copy', 'html'),
   gulp.series('serve')
 ));
@@ -388,7 +396,7 @@ gulp.task('bower:copy', () =>
 // 'gulp build --prod' -- same as above but with production settings
 gulp.task('build', gulp.series(
   gulp.series('clean:assets', 'clean:gzip', 'clean:styleguide'),
-  gulp.series('assets', 'inject:head', 'inject:footer'),
+  gulp.series('assets', 'wiredep', 'inject:head', 'inject:styleguide:head', 'inject:footer', 'inject:styleguide:footer'),
   gulp.series('jekyll', 'styleguide', 'bower:copy', 'assets:copy', 'html')
 ));
 
@@ -402,3 +410,44 @@ gulp.task('rebuild', gulp.series('clean:dist', 'clean:assets',
 
 // 'gulp check' -- checks your Jekyll configuration for errors and lint your JS
 gulp.task('check', gulp.series('jekyll:doctor', 'lint'));
+
+
+
+// BACKEND COPY TASKS
+gulp.task('backend:clean', () => {
+  return del([
+    backendAssetsPath + 'css/**/*',
+    backendAssetsPath + 'js/**/*',
+    backendAssetsPath + 'images/**/*',
+    backendAssetsPath + 'fonts/**/*',
+    backendAssetsPath + 'bower_components/**/*'
+  ], {force: true});
+});
+
+gulp.task('backend:copy:css', () =>
+  gulp.src('dist/assets/stylesheets/**/*')
+  .pipe(gulp.dest(backendAssetsPath + 'css'))
+);
+gulp.task('backend:copy:js', () =>
+  gulp.src('dist/assets/javascript/**/*')
+  .pipe(gulp.dest(backendAssetsPath + 'js'))
+);
+gulp.task('backend:copy:images', () =>
+  gulp.src('dist/assets/images/**/*')
+  .pipe(gulp.dest(backendAssetsPath + 'images'))
+);
+gulp.task('backend:copy:fonts', () =>
+  gulp.src('dist/assets/fonts/**/*')
+  .pipe(gulp.dest(backendAssetsPath + 'fonts'))
+);
+gulp.task('backend:copy:bower_components', () =>
+  gulp.src('dist/bower_components/**/*')
+  .pipe(gulp.dest(backendAssetsPath + 'bower_components'))
+);
+
+gulp.task('backend:copy', gulp.series(
+  gulp.series('clean:assets', 'clean:gzip', 'clean:styleguide', 'backend:clean'),
+  gulp.series('assets', 'wiredep', 'inject:head', 'inject:styleguide:head', 'inject:footer', 'inject:styleguide:footer'),
+  gulp.series('jekyll', 'styleguide', 'bower:copy', 'assets:copy', 'html'),
+  gulp.series('backend:copy:css', 'backend:copy:js', 'backend:copy:images', 'backend:copy:fonts', 'backend:copy:bower_components')
+));

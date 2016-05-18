@@ -12,6 +12,14 @@ $light-primary: $color-white;
 $link-primary: $color-links;
 
 
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Global text color on `<body>`.
+$text-color: $color-text;
+
+
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
@@ -39,3 +47,116 @@ $btn-font-weight: 800;
 $btn-border-radius-base: 0;
 $btn-border-radius-large: 0;
 $btn-border-radius-small: 0;
+
+
+//== Pagination
+//
+//##
+
+$pagination-hover-color: $color-white;
+$pagination-hover-bg: $color-links;
+$pagination-hover-border: $color-links;
+
+$pagination-active-color: $color-white;
+$pagination-active-bg: $color-black;
+$pagination-active-border: $color-black;
+
+
+//== Progress bars
+//
+//##
+
+//** Background color of the whole progress component
+$progress-bg: $color-athensgray;
+//** Progress bar text color
+$progress-bar-color: $color-white;
+//** Variable for setting rounded corners on progress bar.
+$progress-border-radius: 0;
+
+//** Default progress bar color
+$progress-bar-bg: $color-celery;
+
+
+//== Form states and alerts
+//
+//## Define colors for form feedback states and, by default, alerts.
+
+$alert-border-radius: 0;
+
+$state-warning-text: $color-white;
+$state-warning-bg: $color-supernova;
+$state-warning-border: $color-supernova;
+
+
+//== Modals
+//
+//##
+
+//** Padding applied to the modal body
+$modal-inner-padding: 18px 32px;
+
+//** Padding applied to the modal title
+$modal-title-padding: 18px 32px;
+
+//** Modal backdrop background color
+$modal-backdrop-bg: #000;
+//** Modal backdrop opacity
+$modal-backdrop-opacity: .5;
+//** Modal header border color
+$modal-header-border-color: $color-athensgray;
+//** Modal footer border color
+$modal-footer-border-color: $modal-header-border-color;
+
+$modal-lg: 560px;
+$modal-md: 560px;
+
+
+//== Navs
+//
+//##
+
+//=== Shared nav styles
+$nav-link-padding: 10px 10px 0;
+$nav-link-hover-bg: transparent;
+
+//== Tabs
+$nav-tabs-border-color: $color-silver;
+
+$nav-tabs-link-hover-border-color: $color-links;
+
+$nav-tabs-active-link-hover-bg: $color-white;
+$nav-tabs-active-link-hover-color: $color-links;
+$nav-tabs-active-link-hover-border-color: $color-links;
+
+
+//== Tables
+//
+//## Customizes the `.table` component with basic values, each used across all table variations.
+
+//** Padding for `<th>`s and `<td>`s.
+$table-cell-padding: 25px;
+
+//** Default background color used for all tables.
+$table-bg: transparent;
+
+//** Border color for table and cell borders.
+$table-border-color: $color-athensgray;
+
+
+//== Dropdowns
+//
+//## Dropdown menu container and contents.
+
+//** Dropdown menu `border-color`.
+$dropdown-border: $color-silver;
+//** Dropdown menu `border-color` **for IE8**.
+$dropdown-fallback-border: $color-silver;
+//** Divider color for between dropdown items.
+$dropdown-divider-bg: $color-silver;
+
+//** Dropdown link text color.
+$dropdown-link-color: $color-text;
+//** Hover color for dropdown links.
+$dropdown-link-hover-color: $color-white;
+//** Hover background for dropdown links.
+$dropdown-link-hover-bg: $color-mineshaft;

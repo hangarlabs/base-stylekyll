@@ -2,9 +2,77 @@
 //
 // Location: scss/modules/_search.scss
 //
+// Markup:
+// <div class="container-fluid">
+//   <div class="row">
+//     <div class="col-xs-12">
+//       <form class="cm-cdt-m-search">
+//         <div class="cm-cdt-m-dropdown is-autocomplete">
+//           <select data-url="/api/users.json" required>
+//             <option value=""></option>
+//           </select>
+//         </div>
+//         <button id="search"><svg class="icon icon-search"><use xlink:href="#search"></use></svg></button>
+//       </form>
+//     </div>
+//   </div>
+// </div>
 //
-// Styleguide 2.11
+// Styleguide 2.12
+
+$search-width: 325px;
 
 .#{$prefix}-m-search {
-
+	margin: 50px 0;
+	position: relative;
+	width: $search-width;
+	float: right;
+	button {
+		background: none;
+	  border: none;
+		position: absolute;
+		top: 25px;
+		right: 20px;
+		z-index: 1;
+		// outline: none;
+	}
+	.#{$prefix}-m-dropdown {
+		margin: 0;
+		.selectize-control {
+			float: right;
+			width: 0;
+			@include transition(all 1s ease);
+		}
+		.selectize-input {
+			border-top: 1px solid $color-silver;
+			border-bottom: 1px solid $color-silver;
+			padding-left: 0;
+			padding-right: 0;
+			height: 82px;
+			padding-top: 0;
+			padding-bottom: 0;
+			input {
+				display: none !important;
+			}
+		}
+	}
+	&.active {
+		.#{$prefix}-m-dropdown {
+			.selectize-control {
+				width: 100%;
+			}
+			.selectize-input {
+				padding-left: 15px;
+				input {
+					display: inline-block !important;
+				}
+			}
+			.selectize-dropdown {
+				width: 100% !important;
+			}
+			.option {
+				width: $search-width;
+			}
+		}
+	}
 }

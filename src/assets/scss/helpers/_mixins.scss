@@ -76,6 +76,31 @@
   }
 }
 
+// Background Color, Border Color, Color
+@mixin cdt-btn-special($bkg-col, $col:$color-white) {
+  background-color: $bkg-col;
+  border-color: $bkg-col;
+  color: $col;
+  &:focus {
+    background-color: $bkg-col;
+    border-color: $bkg-col;
+    color: $col;
+  }
+  &:hover,
+  &:active {
+    background-color: darken($bkg-col, 7%);
+    border-color: darken($bkg-col, 7%);
+    color: $col;
+  }
+  &:focus:active {
+    background-color: darken($bkg-col, 7%);
+    border-color: darken($bkg-col, 7%);
+    color: $col;
+    outline: 0;
+    box-shadow: none;
+  }
+}
+
 @mixin vertical-align($position: absolute) {
   position: $position;
   top: 50%;

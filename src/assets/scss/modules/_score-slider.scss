@@ -2,12 +2,115 @@
 //
 // Location: scss/modules/_score-slider.scss
 //
-// http://www.html5tutorial.info/html5-range.php
-//
-// Example 13: http://www.jqueryrain.com/?1RE1sMzh
+// Markup:
+// <div class="cm-cdt-m-score-slider">
+//   <div class="container-fluid">
+//     <div class="row">
+//       <div class="col-xs-12">
+//         <h3>Talent</h3>
+//         <h5>Does this person have the knowledge, skills, abilities and future potential (aptitude) to be meet the expectations of their role and position?</h5>
+//         <form>
+//           <input
+//             type="text"
+//             name="slider-n"
+//             id="slider-n"
+//             data-provide="slider"
+//             data-slider-ticks="[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+//             data-slider-ticks-labels='["N/A", "", "", "", "", "", "", "", "", "", "10"]'
+//             data-slider-tooltip="always"
+//             data-slider-tooltip_position = "top">
+//             <div class="slider-submit">
+//               <button class="btn btn-primary" type="submit">Ok</button>
+//               <span>Or Press Enter</span>
+//             </div>
+//         </form>
+//       </div>
+//     </div>
+//   </div>
+// </div>
 //
 // Styleguide 2.02
 
 .#{$prefix}-m-score-slider {
-
+  margin-top: 10px;
+  padding: 0 20px;
+  h3 {
+    display: inline-block;
+    margin-top: 40px;
+    @include transition(all 1s ease);
+  }
+  .score {
+    visibility: hidden;
+    &::before {
+      content: ': '
+    }
+  }
+  h5 {
+    text-transform: none;
+    margin-bottom: 75px;
+  }
+  .slider.slider-horizontal{
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 70px !important;
+    .slider-track{
+      height: 2px;
+      margin: 0;
+      .slider-tick{
+        margin-top: -7px;
+        width: 15px;
+        height: 15px;
+        background-image: -webkit-linear-gradient(top, $color-athensgray 0%, $color-athensgray 100%);
+        background-image: -o-linear-gradient(top, $color-athensgray 0%, $color-athensgray 100%);
+        background-image: linear-gradient(to bottom, $color-athensgray 0%, $color-athensgray 100%);
+      }
+      .slider-handle{
+        margin-top: -8px;
+        background-color: #337ab7;
+        background-image: -webkit-linear-gradient(top, $color-redorange 0%, $color-redorange 100%);
+        background-image: -o-linear-gradient(top, $color-redorange 0%, $color-redorange 100%);
+        background-image: linear-gradient(to bottom, $color-redorange 0%, $color-redorange 100%);
+      }
+      .slider-selection{
+        display: none;
+      }
+    }
+    .slider-tick-label-container {
+      margin-left: -57px !important;
+      .slider-tick-label {
+        padding-top: 10px;
+        color: #000;
+        width: 114px !important;
+      }
+    }
+    .slider-tick-label-container{
+      margin-top: -40px;
+    }
+    .tooltip {
+      margin-left: -11.5px !important;
+    }
+  }
+  .slider-submit {
+    span {
+      font-family: "Trade Gothic W01";
+      font-style: normal;
+      color: $color-text;
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 12px;
+      line-height: 17px;
+      margin-left: 12px;
+    }
+  }
+  &.active {
+    h3 {
+      font-size: 20px;
+      line-height: 25px;
+      color: $color-silver;
+      cursor: pointer;
+    }
+    .score {
+      visibility: visible;
+    }
+  }
 }

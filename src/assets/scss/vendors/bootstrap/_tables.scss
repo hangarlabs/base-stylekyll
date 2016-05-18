@@ -2,4 +2,353 @@
 //
 // Location: scss/vendors/bootstrap/_tables.scss
 //
-// Styleguide 2.10
+// Markup:
+// <div class="container-fluid">
+//   <div class="row">
+//     <div class="col-xs-12">
+//       <table class="table table-1">
+//         <thead>
+//           <tr>
+//             <th>Peer</th>
+//             <th>Email</th>
+//             <th>Progress</th>
+//             <th>Score</th>
+//           </tr>
+//         </thead>
+//         <tbody>
+//           <tr>
+//             <td><span><svg class="icon icon-arrow rotate-90"><use xlink:href="#arrow"></use></svg></span> You</td>
+//             <td>ernestoo@criticalmass.com</td>
+//             <td><svg class="icon icon-completed"><use xlink:href="#completed"></use></svg></td>
+//             <td>8</td>
+//           </tr>
+//           <tr>
+//             <td><span>1</span> Adelia Johnson Depp</td>
+//             <td>ernestoo@criticalmass.com</td>
+//             <td><svg class="icon icon-completed"><use xlink:href="#completed"></use></svg></td>
+//             <td>8</td>
+//           </tr>
+//           <tr>
+//             <td><span>2</span> Andrea Zuniga Rodríguez</td>
+//             <td>ernestoo@criticalmass.com</td>
+//             <td><svg class="icon icon-in-progress"><use xlink:href="#in-progress"></use></svg></td>
+//             <td>8</td>
+//           </tr>
+//           <tr>
+//             <td><span>3</span> Freddy Felipe Umana</td>
+//             <td>ernestoo@criticalmass.com</td>
+//             <td><svg class="icon icon-uncompleted"><use xlink:href="#uncompleted"></use></svg></td>
+//             <td>8</td>
+//           </tr>
+//         </tbody>
+//       </table>
+//     </div>
+//   </div>
+// </div>
+// <div class="container-fluid">
+//   <div class="row">
+//     <div class="col-xs-12">
+//       <table class="table table-2">
+//         <thead>
+//           <tr>
+//             <th>Peer</th>
+//             <th>Email</th>
+//             <th>Progress</th>
+//             <th>Score</th>
+//             <th></th>
+//           </tr>
+//         </thead>
+//         <tbody>
+//           <tr>
+//             <td><span><svg class="icon icon-arrow rotate-90"><use xlink:href="#arrow"></use></svg></span> You</td>
+//             <td>ernestoo@criticalmass.com</td>
+//             <td><svg class="icon icon-completed"><use xlink:href="#completed"></use></svg></td>
+//             <td>8</td>
+//             <td></td>
+//           </tr>
+//           <tr>
+//             <td><span>1</span> Adelia Johnson Depp</td>
+//             <td>ernestoo@criticalmass.com</td>
+//             <td><svg class="icon icon-completed"><use xlink:href="#completed"></use></svg></td>
+//             <td>8</td>
+//             <td><a class="brn btn-link" href="#">send reminder</a></td>
+//           </tr>
+//           <tr>
+//             <td><span>2</span> Andrea Zuniga Rodríguez</td>
+//             <td>ernestoo@criticalmass.com</td>
+//             <td><svg class="icon icon-in-progress"><use xlink:href="#in-progress"></use></svg></td>
+//             <td>8</td>
+//             <td></td>
+//           </tr>
+//           <tr>
+//             <td><span>3</span> Freddy Felipe Umana</td>
+//             <td>ernestoo@criticalmass.com</td>
+//             <td><svg class="icon icon-uncompleted"><use xlink:href="#uncompleted"></use></svg></td>
+//             <td>8</td>
+//             <td><a class="brn btn-link" href="#">send reminder</a></td>
+//           </tr>
+//         </tbody>
+//       </table>
+//     </div>
+//   </div>
+// </div>
+// <div class="container-fluid">
+//   <div class="row">
+//     <div class="col-xs-12">
+//       <table class="table table-3">
+//         <thead>
+//           <tr>
+//             <th>Peer</th>
+//             <th>Employment Relation</th>
+//             <th></th>
+//           </tr>
+//         </thead>
+//         <tbody>
+//           <tr>
+//             <td><span>1&#42;</span> Adelia Johnson Depp</td>
+//             <td>Worked with him on Citi on the last few months</td>
+//             <td><a href="#"><svg class="icon icon-delete"><use xlink:href="#delete"></use></svg></a></td>
+//           </tr>
+//           <tr>
+//             <td><span>2&#42;</span> Andrea Zuniga Rodríguez</td>
+//             <td>Worked with him on Citi on the last few months</td>
+//             <td><a href="#"><svg class="icon icon-delete"><use xlink:href="#delete"></use></svg></a></td>
+//           </tr>
+//           <tr>
+//             <td><span>3&#42;</span> Freddy Felipe Umana</td>
+//             <td>Worked with him on Citi on the last few months</td>
+//             <td><a href="#"><svg class="icon icon-delete"><use xlink:href="#delete"></use></svg></a></td>
+//           </tr>
+//           <tr>
+//             <td><span>4</span> Add new peer</td>
+//             <td></td>
+//             <td><a href="#" class="btn btn-sm btn-secondary">Add Peer</a></td>
+//           </tr>
+//         </tbody>
+//       </table>
+//     </div>
+//   </div>
+// </div>
+// <div class="container-fluid">
+//   <div class="row">
+//     <div class="col-xs-12">
+//       <table class="table table-4">
+//         <thead>
+//           <tr>
+//             <th>Peer</th>
+//             <th>Email</th>
+//             <th>Strongest Value</th>
+//             <th>Weakest Value</th>
+//             <th>Score</th>
+//           </tr>
+//         </thead>
+//         <tbody>
+//           <tr>
+//             <td>Adelia Johnson Depp</td>
+//             <td>ernestoo@criticalmass.com</td>
+//             <td>All</td>
+//             <td>-</td>
+//             <td>10</td>
+//           </tr>
+//           <tr>
+//             <td>Andrea Zuniga Rodríguez</td>
+//             <td>ernestoo@criticalmass.com</td>
+//             <td>Passionate, driven, recommendation</td>
+//             <td>Honest</td>
+//             <td>8</td>
+//           </tr>
+//           <tr>
+//             <td>Freddy Felipe Umana</td>
+//             <td>ernestoo@criticalmass.com</td>
+//             <td></td>
+//             <td></td>
+//             <td>Uncompleted</td>
+//           </tr>
+//           <tr>
+//             <td>Mark Howell Ki</td>
+//             <td>ernestoo@criticalmass.com</td>
+//             <td>All</td>
+//             <td>-</td>
+//             <td>10</td>
+//           </tr>
+//         </tbody>
+//       </table>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 2.11
+
+.table {
+
+	> thead,
+	> thead:first-child {
+		> tr,
+		> tr:first-child {
+			> th {
+				border-top: 1px solid $color-silver;
+				border-bottom: 1px solid $color-silver;
+				font-family: "Trade Gothic W01";
+			  font-style: normal;
+			  font-weight: 700;
+				font-size: 20px;
+  			line-height: 25px;
+  			text-transform: uppercase;
+  			vertical-align: middle;
+			}
+		}
+	}
+
+	> tbody {
+		> tr {
+			> td {
+				font-family: "Trade Gothic W01";
+				font-style: normal;
+			  font-weight: 800;
+				font-size: 14px;
+  			line-height: 19px;
+  			border-bottom: 1px solid $color-athensgray;
+  			vertical-align: middle;
+  			&:nth-child(1) {
+  				> span {
+  					margin-right: 30px;
+						.icon-arrow {
+							margin-left: -17px;
+						}
+  				}
+  			}
+			}
+		}
+	}
+
+	.btn-link {
+		font-family: "Trade Gothic W01";
+		font-style: normal;
+	  font-weight: 800;
+	  text-transform: uppercase;
+	}
+
+	a {
+		.icon-delete {
+			color: $color-icons;
+		}
+		&:hover {
+			.icon-delete {
+				color: $color-links;
+			}	
+		}
+	}
+
+	// Types of Table
+	&.table-1,
+	&.table-2 {
+		> thead,
+		> thead:first-child {
+			> tr,
+			> tr:first-child {
+				> th {
+					&:nth-child(4) {
+		  			text-align: right;
+	  			}
+				}
+			}
+		}
+		> tbody {
+			> tr {
+				> td {
+					&:nth-child(3) {
+		  			position: relative;
+		  			left: 25px;
+	  			}
+	  			&:nth-child(4) {
+	  				font-weight: 700;
+						font-size: 20px;
+		  			line-height: 25px;
+		  			text-align: right;
+		  			position: relative;
+		  			text-transform: uppercase;
+    				right: 16px;
+	  			}
+	  			&:nth-child(5) {
+		  			text-align: right;
+	  			}
+				}
+			}
+		}
+	}
+	&.table-3 {
+		> tbody {
+			> tr {
+				> td {
+					&:nth-child(3) {
+		  			text-align: right;
+	  			}
+				}
+				&:last-child {
+					> td {
+						&:nth-child(1) {
+			  			color: $color-athensgray;
+		  			}
+					}
+				}
+			}
+		}
+		.#{$prefix}-m-dropdown {
+			margin-top: 0;
+			margin-bottom: 0;
+			.selectize-input {
+				border-bottom: none;
+				padding-left: 0;
+				input,
+				.item {
+					text-transform: capitalize;
+					font-size: 14px;
+					line-height: 19px;
+					font-weight: 800;
+				}
+			}
+			.option {
+				img {
+					margin-left: 10px;
+			    margin-top: 10px;
+			    margin-bottom: 10px;
+				}
+			}
+		}
+		.relation {
+			border: none;
+			font-size: 14px;
+			line-height: 19px;
+			font-weight: 800;
+			width: 100%;
+		}
+	}
+	&.table-4 {
+		> thead,
+		> thead:first-child {
+			> tr,
+			> tr:first-child {
+				> th {
+					&:nth-child(5) {
+		  			text-align: right;
+	  			}
+				}
+			}
+		}
+		> tbody {
+			> tr {
+				> td {
+	  			&:nth-child(5) {
+	  				font-weight: 700;
+						font-size: 20px;
+		  			line-height: 25px;
+		  			text-align: right;
+		  			position: relative;
+		  			text-transform: uppercase;
+    				right: 16px;
+	  			}
+				}
+			}
+		}
+	}
+}

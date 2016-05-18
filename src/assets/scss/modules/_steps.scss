@@ -2,9 +2,125 @@
 //
 // Location: scss/modules/_steps.scss
 //
+// Markup:
+// <div class="container-fluid">
+//   <div class="row">
+//     <div class="col-xs-12">
+//       <ul class="cm-cdt-m-steps">
+//         <li class="circle bg-perfect color-perfect">
+//           <h4>Peers selection</h4>
+//         </li>
+//         <li class="line bg-perfect" style="width: 300px;"></li>
+//         <li class="circle active">
+//           <h4>Peers evaluation</h4>
+//         </li>
+//         <li class="line bg-high" style="width: 300px;"></li>
+//         <li class="circle bg-high color-high">
+//           <h4>Finish evaluation</h4>
+//         </li>
+//       </ul>
+//     </div>
+//   </div>
+// </div>
+// <div class="container-fluid">
+//   <div class="row">
+//     <div class="col-xs-12">
+//       <ul class="cm-cdt-m-steps">
+//         <li class="circle bg-perfect color-perfect">
+//           <h4>Peers selection</h4>
+//         </li>
+//         <li class="line bg-perfect" style="width: 63px;"></li>
+//         <li class="circle small bg-perfect"></li>
+//         <li class="line bg-perfect" style="width: 63px;"></li>
+//         <li class="circle small bg-perfect"></li>
+//         <li class="line bg-perfect" style="width: 63px;"></li>
+//         <li class="circle small active">
+//           <h4>Peers evaluation</h4>
+//         </li>
+//         <li class="line bg-high" style="width: 63px;"></li>
+//         <li class="circle bg-high color-high">
+//           <h4>Peers evaluation</h4>
+//         </li>
+//         <li class="line bg-high" style="width: 300px;"></li>
+//         <li class="circle bg-high color-high">
+//           <h4>Finish evaluation</h4>
+//         </li>
+//       </ul>
+//     </div>
+//   </div>
+// </div>
 //
 // Styleguide 2.03
 
 .#{$prefix}-m-steps {
-
+  padding-left: 0;
+  list-style: none;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  > li {
+    display: inline-block;
+    margin-left: -4px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  .circle {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    position: relative;
+    h4 {
+      position: absolute;
+      top: 35px;
+      width: 300px;
+      text-align: center;
+      left: -150px;
+      margin: 0;
+    }
+    &.active {
+      background-color: transparent;
+      color: $color-celery;
+      border: 1px solid $color-celery;
+      padding: 3px;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        background-color: $color-celery;
+        border-radius: 50%;
+        top: 3px;
+        left: 3px;
+      }
+    }
+  }
+  .small {
+    width: 16px;
+    height: 16px;
+    margin-bottom: 4px;
+    h4 {
+      font-family: "Plantin W01";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+      text-transform: none;
+      top: -30px;
+    }
+    &.active {
+      &::after {
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+  .line {
+    height: 1px;
+    vertical-align: top;
+    margin-top: 14px;
+  }
 }

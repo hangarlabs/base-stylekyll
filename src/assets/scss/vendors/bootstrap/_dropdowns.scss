@@ -2,4 +2,122 @@
 //
 // Location: scss/vendors/bootstrap/_dropdowns.scss
 //
-// Styleguide 2.12
+// Markup:
+// <nav class="cm-cdt-m-nav">
+//   <div class="container-fluid">
+//     <div class="row">
+//       <div class="col-xs-12">
+//         <h4>Career Development Tool</h4>
+//         <div class="pull-right">
+//           <div class="dropdown roles">
+//             <a id="roleDropdown" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+//               <p>Office Discipline Lead<svg class="icon icon-arrow rotate-180"><use xlink:href="#arrow"></use></svg></p>
+//             </a>
+//             <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="roleDropdown">
+//               <li><span>Role</span></li>
+//               <li><a href="#">Career Developer</a></li>
+//               <li><a href="#">Office Discipline Lead</a></li>
+//               <li><a href="#">Global Discipline Lead</a></li>
+//               <li><a href="#">Super Admin</a></li>
+//             </ul>
+//           </div>
+//           <div class="dropdown notifications">
+//             <a id="notificationDropdown" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+//               <svg class="icon icon-notification-alert"><use xlink:href="#notification-alert"></use></svg>
+//             </a>
+//             <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="notificationDropdown">
+//               <li><span>Notifications</span></li>
+//               <li><a href="#">Freddy Felipe’s team has completed the evaluations.<span>Today</span></a></li>
+//               <li><a href="#">Adelia Howell’s team has completed the evaluations.<span>Yesterday</span></a></li>
+//               <li><a href="#">Freddy Felipe’s team has completed the evaluations.<span>03/15/16</span></a></li>
+//             </ul>
+//           </div>
+//           <a href="#"><svg class="icon icon-logout"><use xlink:href="#logout"></use></svg></a>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+// </nav>
+//
+// Styleguide 2.13
+
+.dropdown {
+	.dropdown-toggle {
+		.icon-arrow {
+		  @include transition(transform 0.2s ease);
+		}
+	}
+	&.open {
+		.dropdown-toggle {
+			.icon-arrow {
+				-webkit-transform: rotate(0deg);
+			  -moz-transform: rotate(0deg);
+			  -ms-transform: rotate(0deg);
+			  transform: rotate(0deg);
+			}
+		}
+	}
+}
+
+.dropdown-toggle {
+	&:focus {
+		// Default
+	  outline: thin dotted;
+	  // WebKit
+	  outline: 5px auto -webkit-focus-ring-color;
+	  outline-offset: -2px;
+	}
+}
+
+.dropdown-menu {
+	border-radius: 0;
+	padding: 0;
+	width: 250px;
+	> li {
+		font-family: "Trade Gothic W01";
+		font-style: normal;
+	  font-weight: 800;
+	  font-size: 14px;
+		line-height: 19px;
+		border-bottom: 1px solid $color-silver;
+		position: relative;
+		&:first-child {
+			text-transform: uppercase;
+		}
+		&:last-child {
+			border-bottom: none;
+		}
+		> a {
+			padding: 10px 14px;
+			white-space: normal;
+			font-weight: inherit;
+			line-height: inherit;
+		}
+		> span {
+			padding: 10px 14px;
+			display: block;
+			color: $color-text;
+		}
+	}
+}
+
+.notifications {
+	.dropdown-menu {
+		> li {
+			> a {
+				padding-right: 65px;
+				span {
+					position: absolute;
+					top: 14px;
+					right: 8px;
+					font-family: "Plantin W01";
+					font-style: normal;
+				  font-weight: 400;
+				  font-size: 12px;
+				  line-height: 12px;
+				  text-transform: capitalize;
+				}
+			}
+		}
+	}
+}

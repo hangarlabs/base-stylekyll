@@ -1,18 +1,31 @@
 'use strict';
 
-// Import Modules
-import module from "./modules/module";
+// Import Search
+import search from "./modules/search";
 
-// Import Vendors
-import vendor from "./vendors/vendor";
+// Import Forms
+import forms from "./modules/forms";
+
+// Import Selectize
+import selectize from "./vendors/selectize";
+
+// Import Slider
+import slider from "./vendors/slider";
 
 // jQuery DOM Ready
 $(() => {
   'use strict';
 
-  // Initialize Modules
-  module();
+  // Initialize Search
+  search();
 
-  // Initialize Vendors
-  vendor();
+  // Initialize Forms
+  forms();
+
+  // Initialize Slider
+  slider();
+
+  // Initialize Selectize
+  selectize();
+
 });

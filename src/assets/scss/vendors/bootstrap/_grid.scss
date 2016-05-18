@@ -68,35 +68,122 @@
 //
 // Styleguide 1.01
 
-// Create 8 columns layout
+// Create 5, 8, 9 and 10 columns layout
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths,
 .col-xs-8ths,
 .col-sm-8ths,
 .col-md-8ths,
-.col-lg-8ths {
+.col-lg-8ths,
+.col-xs-9ths,
+.col-sm-9ths,
+.col-md-9ths,
+.col-lg-9ths,
+.col-xs-10ths,
+.col-sm-10ths,
+.col-md-10ths,
+.col-lg-10ths,
+.col-xs-11ths,
+.col-sm-11ths,
+.col-md-11ths,
+.col-lg-11ths {
   position: relative;
   min-height: 1px;
   padding-left:  ceil(($grid-gutter-width / 2));
   padding-right: floor(($grid-gutter-width / 2));
 }
-.col-xs-8ths {
-  width: 12.5%;
+.col-xs-5ths,
+.col-xs-8ths,
+.col-xs-9ths,
+.col-xs-10ths,
+.col-xs-11ths {
   float: left;
 }
+.col-xs-5ths {
+  width: 20%;
+}
+.col-xs-8ths {
+  width: 12.5%;
+}
+.col-xs-9ths {
+  width: 11.111111111%;
+}
+.col-xs-10ths {
+  width: 10%;
+}
+.col-xs-11ths {
+  width: 9.09090909090909%;
+}
 @media (min-width: $screen-sm-min) {
+  .col-sm-5ths,
+  .col-sm-8ths,
+  .col-sm-9ths,
+  .col-sm-10ths,
+  .col-sm-11ths {
+    float: left;
+  }
+  .col-sm-5ths {
+    width: 20%;
+  }
   .col-sm-8ths {
     width: 12.5%;
-    float: left;
+  }
+  .col-sm-9ths {
+    width: 11.111111111%;
+  }
+  .col-sm-10ths {
+    width: 10%;
+  }
+  .col-sm-11ths {
+    width: 9.09090909090909%;
   }
 }
 @media (min-width: $screen-md-min) {
+  .col-md-5ths,
+  .col-md-8ths,
+  .col-md-9ths,
+  .col-md-10ths,
+  .col-md-11ths {
+    float: left;
+  }
+  .col-md-5ths {
+    width: 20%;
+  }
   .col-md-8ths {
     width: 12.5%;
-    float: left;
+  }
+  .col-md-9ths {
+    width: 11.111111111%;
+  }
+  .col-md-10ths {
+    width: 10%;
+  }
+  .col-md-11ths {
+    width: 9.09090909090909%;
   }
 }
 @media (min-width: $screen-lg-min) {
+  .col-lg-5ths,
+  .col-lg-8ths,
+  .col-lg-10ths,
+  .col-lg-11ths {
+    float: left;
+  }
+  .col-lg-5ths {
+    width: 20%;
+  }
   .col-lg-8ths {
     width: 12.5%;
-    float: left;
+  }
+  .col-lg-9ths {
+    width: 11.111111111%;
+  }
+  .col-lg-10ths {
+    width: 10%;
+  }
+  .col-lg-11ths {
+    width: 9.09090909090909%;
   }
 }

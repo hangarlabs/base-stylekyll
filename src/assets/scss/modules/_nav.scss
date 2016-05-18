@@ -2,9 +2,99 @@
 //
 // Location: scss/modules/_nav.scss
 //
+// Markup:
+// <nav class="cm-cdt-m-nav">
+//   <div class="container-fluid">
+//     <div class="row">
+//       <div class="col-xs-12">
+//         <h4>Career Development Tool</h4>
+//         <div class="pull-right">
+//           <div class="dropdown roles">
+//             <a id="roleDropdown" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+//               <p>Office Discipline Lead<svg class="icon icon-arrow rotate-180"><use xlink:href="#arrow"></use></svg></p>
+//             </a>
+//             <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="roleDropdown">
+//               <li><span>Role</span></li>
+//               <li><a href="#">Career Developer</a></li>
+//               <li><a href="#">Office Discipline Lead</a></li>
+//               <li><a href="#">Global Discipline Lead</a></li>
+//               <li><a href="#">Super Admin</a></li>
+//             </ul>
+//           </div>
+//           <div class="dropdown notifications">
+//             <a id="notificationDropdown" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+//               <svg class="icon icon-notification-alert"><use xlink:href="#notification-alert"></use></svg>
+//             </a>
+//             <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="notificationDropdown">
+//               <li><span>Notifications</span></li>
+//               <li><a href="#">Freddy Felipe’s team has completed the evaluations.<span>Today</span></a></li>
+//               <li><a href="#">Adelia Howell’s team has completed the evaluations.<span>Yesterday</span></a></li>
+//               <li><a href="#">Freddy Felipe’s team has completed the evaluations.<span>03/15/16</span></a></li>
+//             </ul>
+//           </div>
+//           <a href="#"><svg class="icon icon-logout"><use xlink:href="#logout"></use></svg></a>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+// </nav>
 //
 // Styleguide 3.02
 
 .#{$prefix}-m-nav {
-
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: $color-mineshaft;
+	color: $color-white;
+	margin-bottom: 60px;
+	h4,
+	p,
+	.dropdown {
+		display: inline-block;
+	}
+	h4,
+	p {
+		margin: 0;
+		vertical-align: middle;
+	}
+	h4 {
+		line-height: 20px;
+	}
+	p {
+		line-height: 14px;
+		text-transform: uppercase;
+		font-weight: 400;
+		svg {
+			margin-left: 15px;
+			position: relative;
+  		top: -2px;
+		}
+	}
+	a {
+		color: $color-white;
+		display: inline-block;
+		text-decoration: none;
+		&:hover {
+			color: $color-links;
+		}
+	}
+	.notifications {
+		margin-left: 40px;
+		ul a:hover {
+			background-color: $color-athensgray;
+			color: $color-text;
+		}
+		ul .new a {
+			background-color: $color-mineshaft;
+			color: $color-white;
+		}
+	}
+	.icon-logout {
+		margin-left: 15px;
+	}
+	&.is-logout {
+		padding: 0;
+		background-color: $color-links;
+		height: 25px;
+	}
 }

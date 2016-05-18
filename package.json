@@ -1,8 +1,8 @@
 {
-  "name": "cm-career-development-tool",
+  "name": "base-stylekyll",
   "version": "0.0.0",
-  "description": "Career Development Tool",
-  "homepage": "http://www.criticalmass.com/",
+  "description": "Base Stylekyll",
+  "homepage": "http://www.thehangar.cr/",
   "author": {
     "name": "Andres Gatjens",
     "email": "andresgg@thehangar.cr"

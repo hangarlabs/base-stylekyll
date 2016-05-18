@@ -232,9 +232,6 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   text-overflow: ellipsis;
   text-align: right;
 }
-#kss-node .kss-menu-child > .kss-menu-item.kss-active > a {
-  color: #383838;
-}
 #kss-node .kss-content {
   overflow: hidden;
   margin-left: 250px;
@@ -794,7 +791,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .kss-markup pre {
   display: none;
 }
-.icon {
+.section-1-05 .icon {
   margin-right: 50px;
   margin-top: 25px;
   margin-bottom: 25px;
@@ -815,11 +812,6 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   padding: 15px;
   background-color: #EDEBF0;
 }
-.grid-styleguide h4 {
-  margin: 0;
-  text-align: center;
-  color: #FFFFFF;
-}
 .grid-styleguide-column-example {
   width: 100%;
   height: 150px;
@@ -831,4 +823,13 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   height: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+.grid-styleguide-example h4 {
+  margin: 0;
+  text-align: center;
+  color: #FFFFFF;
+}
+.btn-special {
+  float: left;
+  margin-right: 15px;
 }

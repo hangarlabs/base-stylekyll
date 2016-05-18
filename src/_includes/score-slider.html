@@ -1,0 +1,28 @@
+<div class="cm-cdt-m-score-slider hide">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>{{ include.category-title }}<span class="score"></span></h3>
+        <div class="score-container">
+          <h5>{{ include.category-description }}</h5>
+          <form>
+            <input
+            type="text"
+            name="slider-n"
+            id="slider-n"
+            data-provide="slider"
+            data-slider-ticks="[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+            data-slider-ticks-labels='["N/A", "", "", "", "", "", "", "", "", "10"]'
+            data-slider-tooltip="always"
+            data-slider-value="1"
+            data-slider-tooltip_position = "top">
+            <div class="slider-submit">
+              <button class="btn btn-primary" type="submit">Ok</button>
+              <span>Or Press Enter</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

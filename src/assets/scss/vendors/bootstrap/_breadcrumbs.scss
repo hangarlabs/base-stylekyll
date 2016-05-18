@@ -2,4 +2,50 @@
 //
 // Location: scss/vendors/bootstrap/_breadcrumbs.scss
 //
+// A breadcrum is use for "go back" CTAs placed on top of the content as well as the path of controllers or views to navigate back.
+//
+// Markup:
+// <div class="container-fluid">
+//   <div class="row">
+//     <div class="col-xs-12">
+//       <div class="cm-cdt-m-breadcrumbs">
+//         <ol class="breadcrumb">
+//           <li><a href="#">My Employees</a></li>
+//           <li><a href="#">Freddy Felipe Umaña</a></li>
+//           <li class="active"><span>2016 Q1 Assessment</span></li>
+//         </ol>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
 // Styleguide 2.01
+
+.breadcrumb {
+  font-family: $font-family-serif;
+  font-size: 12px;
+  line-height: 12px;
+  background-color: transparent;
+  margin-bottom: 10px;
+  padding-left: 0;
+  & > li + li:before {
+    content: "> ";
+    padding: 0 1px;
+    color: $color-mineshaft;
+  }
+  & li {
+    span {
+      text-decoration: underline;
+    }
+    a {
+      color: $color-mineshaft;
+      text-decoration: underline;
+      &:hover, &:focus {
+        color: $color-redorange;
+      }
+    }
+  }
+  & > li.active {
+    color: $color-redorange;
+  }
+}

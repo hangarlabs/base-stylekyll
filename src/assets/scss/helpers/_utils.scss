@@ -33,3 +33,7 @@
   height: 100%;
   overflow: hidden;
 }
+
+body {
+  min-width: $screen-md-min;
+}

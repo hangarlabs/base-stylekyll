@@ -1,0 +1,25 @@
+<div class="cm-cdt-m-dropdown is-autocomplete hide">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <form>
+          <h3 class="selectize-who-evaluator">who is your {{ include.peer }} evaluator?*</h3>
+          <h3 class="selectize-who-evaluator js-suggest-peer hide">{{ include.peer }} evaluator: <span class="selectize-dynamic-value"></span></h3>
+          <div class="slide-evaluator">
+            <select data-url="/api/users.json" placeholder="Select an evaluator..." required>
+              <option value=""></option>
+            </select>
+            <div class="selectize-relationship-evaluator selectize-second-steps hide">
+              <h3>Describe Your Employment Relationship With <span class="selectize-dynamic-value"></span></h3>
+              <input type="text" class="selectize-relationship-input" id="{{ include.peer }}EmploymentRelationship" placeholder="Employment Relationship...">
+            </div>
+            <div class="selectize-peer selectize-second-steps hide">
+              <button class="btn btn-primary js-suggest-peer" type="submit">Add Peer</button>
+              <span>Or Press Enter</span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

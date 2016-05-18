@@ -2,9 +2,27 @@
 //
 // Location: scss/modules/_footer.scss
 //
+// Markup:
+// <footer class="cm-cdt-m-footer">
+//   <div class="container-fluid">
+//     <div class="row">
+//       <div class="col-xs-12 text-right">
+//         <p>&copy;2016 Critical Mass. All rights reserved.</p>
+//         <svg class="icon icon-logo-small"><use xlink:href="#logo-small"></use></svg>
+//       </div>
+//     </div>
+//   </div>
+// </footer>
 //
 // Styleguide 3.01
 
 .#{$prefix}-m-footer {
-
+	margin-top: 30px;
+	margin-bottom: 30px;
+	p {
+		font-size: 10px;
+		line-height: 15px;
+		display: inline-block;
+		margin-right: 10px;
+	}
 }

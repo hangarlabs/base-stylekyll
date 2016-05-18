@@ -1,13 +1,24 @@
 {
-  "name": "cm-career-development-tool",
+  "name": "base-stylekyll",
   "private": true,
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
-    "jquery": "~2.1.1"
+    "jquery": "~2.1.1",
+    "seiyria-bootstrap-slider": "^7.0.1",
+    "selectize": "^0.12.1",
+    "highcharts": "^4.2.5",
+    "slick-carousel": "^1.6.0"
   },
   "overrides": {
     "bootstrap-sass": {
-      "main": []
+      "main": [
+        "assets/javascripts/bootstrap/transition.js",
+        "assets/javascripts/bootstrap/collapse.js",
+        "assets/javascripts/bootstrap/dropdown.js",
+        "assets/javascripts/bootstrap/modal.js",
+        "assets/javascripts/bootstrap/alert.js",
+        "assets/javascripts/bootstrap/tab.js"
+      ]
     }
   }
 }

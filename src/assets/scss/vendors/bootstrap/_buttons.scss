@@ -10,8 +10,8 @@
 // Markup:
 // <button class="btn {{modifier_class}}">Button</button>
 //
-// .btn-primary         			 - Indicate that the button is the primary feature of the page.
-// .btn-secondary       			 - Indicate that the button is the secondary feature of the page.
+// .btn-primary                - Indicate that the button is the primary feature of the page.
+// .btn-secondary              - Indicate that the button is the secondary feature of the page.
 // .btn-sm.btn-primary         - Indicate that the button is the primary feature of the page.
 // .btn-sm.btn-secondary       - Indicate that the button is the secondary feature of the page.
 //
@@ -19,7 +19,7 @@
 
 .btn {
   font-family: "Trade Gothic W01";
-	font-style: normal;
+  font-style: normal;
   font-size: 18px;
   line-height: 23px;
   text-transform: uppercase;
@@ -29,29 +29,33 @@
 }
 
 .btn-sm {
-	font-size: 14px;
+  font-size: 14px;
   line-height: 19px;
-	min-width: 175px;
+  min-width: 175px;
   min-height: 44px;
   padding: 15px;
 }
 
 // Mixin: cdt-btn:  Background Color
-// 									Border Color
-// 									Color
-// 									Hover Background Color
-// 									Hover Border Color
-// 									Hover Color
-// 									Pressed Background Color
-// 									Pressed Border Color
-// 									Pressed Color
+//                  Border Color
+//                  Color
+//                  Hover Background Color
+//                  Hover Border Color
+//                  Hover Color
+//                  Pressed Background Color
+//                  Pressed Border Color
+//                  Pressed Color
 
 .btn-primary {
-	@include cdt-btn($color-text, $color-text, $color-white, $color-links, $color-links, $color-white, $color-links, $color-links, $color-text);
+  @include cdt-btn($color-text, $color-text, $color-white, $color-links, $color-links, $color-white, $color-links, $color-links, $color-text);
 }
 
 .btn-secondary {
-	@include cdt-btn($color-white, $color-text, $color-text, $color-links, $color-links, $color-white, $color-white, $color-text, $color-text);
+  @include cdt-btn(transparent, $color-text, $color-text, $color-links, $color-links, $color-white, transparent, $color-text, $color-text);
+}
+
+.btn.disabled {
+  @include cdt-btn(transparent, $color-silver, $color-silver, transparent, $color-silver, $color-silver, transparent, $color-silver, $color-silver);
 }
 
 // Button Links
@@ -59,12 +63,12 @@
 // Location: scss/vendors/bootstrap/_buttons.scss
 //
 // Markup:
-// <a href="/styleguide/section-1.html#section-1.5" class="btn btn-link">Button Link</a>
+// <a href="/styleguide/section-1#section-1.07" class="btn btn-link">Button Link</a>
 //
 // Styleguide 1.07
 
 .btn-link {
-	font-size: 12px;
+  font-size: 12px;
   line-height: 14px;
   min-height: 0;
   min-width: 0;
@@ -87,5 +91,111 @@
   &:focus:active {
     border-color: $color-links !important;
     color: $color-links;
+  }
+}
+
+// Special Buttons
+//
+// Location: scss/vendors/bootstrap/_buttons.scss
+//
+// Assessment Scores / Discipline Score / Percentage: In order to use the special buttons, you will need to include the mixin 'cdt-btn-special' that requires two paramaters.
+//
+// $bkg-col: Will be used to determine the background color of the button.
+//
+// $col: Will be used to determine the text color of the button. It is defualt set to $color-white. So you may not need to specify it when you call the mixin.
+//
+// The hover and pressed colors will be automatically added from the '$bkg-col' and '$col' parameters using the SASS function called '[*darken*](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method)'.
+//
+// Markup:
+// <div class="btn-special btn-special-styleguide-test1">
+//   <h5>Q1 Assessment</h5>
+//   <button class="btn">
+//     <span class="h1">2.5</span>
+//     <br />
+//     <span class="p">Score</span>
+//   </button>
+// </div>
+// <div class="btn-special btn-special-styleguide-test2">
+//   <h5>Creative - 35</h5>
+//   <button class="btn">
+//     <span class="h1">8.5</span>
+//     <br />
+//     <span class="p">Score</span>
+//   </button>
+// </div>
+// <div class="btn-special btn-special-styleguide-test3">
+//   <h5>Calgary</h5>
+//   <button class="btn">
+//     <span class="h1">76%</span>
+//     <br />
+//     <span class="p">76/100</span>
+//   </button>
+// </div>
+//
+// Styleguide 1.08
+
+.btn-special {
+  width: 170px;
+  text-transform: uppercase;
+  text-align: center;
+  h5 {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+  .btn {
+    width: 100%;
+    height: 90px;
+    padding: 0;
+    min-height: 0;
+    min-width: 0;
+  }
+  .h1, .p {
+    margin: 0;
+    display: inline-block;
+  }
+  .h1 {
+    line-height: 45px;
+  }
+  .p {
+    line-height: 14px;
+  }
+}
+
+// Mixin: cdt-btn-special:  Background Color
+//                          Color - Default set to $color-white.
+
+.btn-special-styleguide-test1 {
+  .btn {
+    @include cdt-btn-special($color-guardsmanred);
+  }
+}
+.btn-special-styleguide-test2 {
+  .btn {
+    @include cdt-btn-special($color-supernova, $color-text);
+  }
+}
+.btn-special-styleguide-test3 {
+  .btn {
+    @include cdt-btn-special($color-silver);
+  }
+}
+.btn-special-perfect {
+  .btn {
+    @include cdt-btn-special($color-celery);
+  }
+}
+.btn-special-high {
+  .btn {
+    @include cdt-btn-special($color-silver);
+  }
+}
+.btn-special-medium {
+  .btn {
+    @include cdt-btn-special($color-supernova);
+  }
+}
+.btn-special-low {
+  .btn {
+    @include cdt-btn-special($color-guardsmanred);
   }
 }

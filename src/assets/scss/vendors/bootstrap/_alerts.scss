@@ -2,4 +2,47 @@
 //
 // Location: scss/vendors/bootstrap/_alerts.scss
 //
+// Markup:
+// <div class="cm-cdt-m-alert is-inline alert alert-warning alert-dismissible fade in" role="alert">
+//   <div class="container-fluid">
+//   	<div class="row">
+//   		<div class="col-xs-12">
+//   			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><svg class="icon icon-close"><use xlink:href="#close"></use></svg></button>
+//   			<h4>Evaluators</h4><p>5 evaluators requiered. Please complete the list.</p>
+//   		</div>
+//   	</div>
+//   </div>
+// </div>
+//
 // Styleguide 2.06
+
+.alert {
+	padding: 35px 15px;
+	margin-bottom: 50px;
+	.close {
+		color: $color-white;
+		opacity: 1;
+		&:hover {
+			color: $color-links;
+		}
+	}
+	svg {
+		width: 26px;
+		height: 26px;
+	}
+	h4,
+	p {
+		display: inline-block;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	h4 {
+		margin-right: 25px;
+	}
+}
+.alert-dismissible {
+	.close {
+		top: -3px;
+		right: 0;
+	}
+}

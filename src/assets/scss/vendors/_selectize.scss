@@ -1,0 +1,175 @@
+.#{$prefix}-m-dropdown {
+	margin-top: 40px;
+	margin-bottom: 40px;
+
+	&.is-select,
+	&.is-autocomplete {
+		.selectize-control {
+			display: table;
+    	width: 100%;
+		}
+		.selectize-input {
+			width: 100%;
+			max-width: 325px;
+			display: table-cell !important;
+    	vertical-align: middle;
+    	border-left: 0;
+	    border-right: 0;
+	    border-radius: 0;
+	    box-shadow: none;
+	    border-color: $color-silver;
+	    padding-left: 15px;
+	    &::after {
+	    	display: none;
+	    }
+	    svg {
+	    	position: absolute;
+	    	top: 32px;
+	    	right: 4px;
+	    	-webkit-transform: rotate(180deg);
+			  -moz-transform: rotate(180deg);
+			  -ms-transform: rotate(180deg);
+			  transform: rotate(180deg);
+			  @include transition(all 0.2s ease);
+	    }
+	    &.dropdown-active {
+	    	svg {
+	    		-webkit-transform: rotate(0deg);
+				  -moz-transform: rotate(0deg);
+				  -ms-transform: rotate(0deg);
+				  transform: rotate(0deg);
+	    	}
+	    }
+		}
+		.item,
+		.option,
+		.selectize-input input {
+			font-family: "Trade Gothic W01";
+  		font-style: normal;
+  		color: $color-text;
+  		text-transform: uppercase;
+		}
+		.item,
+		.selectize-input input {
+			font-weight: 700;
+			font-size: 20px;
+  		line-height: 25px;
+		}
+		.option {
+  		&.active {
+  			background-color: $color-mineshaft;
+  			color: $color-white;
+  		}
+		}
+		.selectize-dropdown {
+			border-radius: 0;
+			box-shadow: none;
+			border-left: 0;
+	    border-right: 0;
+	    margin: 0;
+	    .highlight {
+	    	background-color: $color-silver;
+	    	color: $color-text;
+	    }
+		}
+	}
+
+	&.is-select {
+		width: 325px;
+		.selectize-input {
+			height: 82px;
+			padding-right: 40px;
+		}
+		.option {
+			padding: 20px;
+			font-weight: 800;
+			font-size: 14px;
+  		line-height: 19px;
+		}
+	}
+
+	&.is-autocomplete {
+		.selectize-who-evaluator {
+			margin-top: 0;
+			margin-bottom: 30px;
+		}
+		&.active {
+			.selectize-who-evaluator {
+				color: $color-silver;
+				font-size: 20px;
+  			line-height: 25px;
+  			cursor: pointer;
+  			margin-bottom: 0;
+  			margin-left: 12px;
+			}
+		}
+		.selectize-relationship-evaluator {
+			h3 {
+				margin-top: 40px;
+				margin-bottom: 0;
+			}
+			input {
+				width: 100%;
+				border: none;
+				border-bottom: 1px solid $color-athensgray;
+				font-family: "Trade Gothic W01";
+	  		font-style: normal;
+	  		color: $color-text;
+	  		text-transform: uppercase;
+	  		font-weight: 700;
+				font-size: 20px;
+	  		line-height: 25px;
+	  		padding: 5px 15px;
+	  		margin-top: 30px;
+	  		&:focus {
+	  			outline: none;
+	  		}
+			}
+		}
+		.selectize-peer {
+			margin-top: 30px;
+			span {
+				font-family: "Trade Gothic W01";
+	  		font-style: normal;
+	  		color: $color-text;
+	  		text-transform: uppercase;
+	  		font-weight: 800;
+				font-size: 12px;
+	  		line-height: 17px;
+	  		margin-left: 12px;
+			}
+		}
+		.selectize-input {
+			height: 30px;
+			border-top: 0;
+			border-color: $color-athensgray;
+			padding-right: 15px;
+		}
+		.selectize-dropdown-content {
+			max-height: 216px;
+		}
+		.option {
+			padding: 10px;
+			display: table;
+			img {
+				float: left;
+				margin-right: 25px;
+				border-radius: 50%;
+				width: 52px;
+				height: 52px;
+			}
+			div {
+				display: table-cell;
+				vertical-align: middle;
+				width: 100%;
+			}
+			p,
+			h6 {
+				margin: 0;
+			}
+			h6 {
+				line-height: 20px;
+			}
+		}
+	}
+}

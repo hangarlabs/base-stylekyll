@@ -2,9 +2,56 @@
 //
 // Location: scss/modules/_login.scss
 //
+// Markup:
+// <div class="container">
+//   <div class="row">
+//     <div class="col-xs-12 text-center">
+//       <div class="cm-cdt-m-login">
+//       	<svg class="icon icon-logo-large"><use xlink:href="#logo-large"></use></svg>
+//       	<div>
+//       		<h4>Career Development Tool</h4>
+// 	      	<p>Sign in with your CM credentials</p>
+// 	      	<form>
+// 	      		<div class="form-group">
+// 					    <input type="text" class="form-control" id="inputUsername" placeholder="Username" required>
+// 					  </div>
+// 					  <div class="form-group">
+// 					    <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+// 					  </div>
+// 	      		<button class="btn btn-sm btn-secondary">Sign In</button>
+// 	      	</form>
+//       	</div>
+//       </div>
+//     </div>
+//   </div>
+// </div>
 //
 // Styleguide 3.03
 
 .#{$prefix}-m-login {
-
+	width: 494px;
+	margin: 0 auto;
+	text-align: left;
+	background-color: #FAF9FA;
+	> div {
+		padding: 25px 30px;
+	}
+	h4 {
+		margin-top: 0;
+		margin-bottom: 10px;
+	}
+	p {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	form {
+		padding-top: 10px;
+		text-align: right;
+		input {
+			text-align: left;
+		}
+		button {
+			margin-top: 20px;
+		}
+	}
 }

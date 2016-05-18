@@ -2,4 +2,55 @@
 //
 // Location: scss/vendors/bootstrap/_paginator.scss
 //
+// Markup: ../../../../_includes/paginator.html
+//
 // Styleguide 2.04
+
+.#{$prefix}-m-paginator {
+	text-align: center;
+}
+
+.pagination {
+	margin: 20px 0;
+	> li {
+		> a,
+		> span {
+			color: $color-black;
+			font-family: "Trade Gothic W01";
+			font-style: normal;
+		  font-weight: 800;
+			border-color: $color-black;
+			font-size: 14px;
+  		line-height: 14px;
+  		padding: 8px 0;
+  		width: 30px;
+  		margin: 0 5px;
+  		&:hover:active,
+			&:focus {
+				background-color: $color-black;
+				border-color: $color-black;
+			}
+		}
+
+		&:first-child,
+		&:last-child {
+			> a,
+			> span {
+				border: none;
+				background-color: transparent;
+				&:hover {
+					color: $color-links;
+				}
+				&:hover:active,
+				&:focus {
+					color: $color-black;
+					background-color: transparent;
+				}
+			}
+			svg {
+				width: 26px;
+				height: 14px;
+			}
+		}
+	}
+}
